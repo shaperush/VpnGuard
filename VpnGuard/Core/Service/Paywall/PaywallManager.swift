@@ -11,7 +11,7 @@ final class PaywallService: ObservableObject {
     
     func getPaywalls(completion: ((Error?) -> Void)? = nil) {
         reset()
-        Adapty.getPaywall("YOUR_PAYWALL_ID") { [weak self] result in
+        Adapty.getPaywall(AppConstants.YOUR_PAYWALL_ID) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(paywall):

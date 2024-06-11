@@ -228,5 +228,7 @@ extension PaywallView {
 struct PaywallView_Previews: PreviewProvider {
     static var previews: some View {
         PaywallView()
+            .environmentObject(PaywallService())
+            .environmentObject(UserService())
     }
 }
