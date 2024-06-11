@@ -1,0 +1,1183 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		282483062C0F1DBE009B00C3 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */; };
+		282483082C0F3385009B00C3 /* SpeedTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */; };
+		2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */ = {isa = PBXBuildFile; productRef = 2824830A2C0F59DC009B00C3 /* InternetSpeed */; };
+		2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */ = {isa = PBXBuildFile; productRef = 2824830D2C0F5BA9009B00C3 /* NDT7 */; };
+		282483102C0F87F1009B00C3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824830F2C0F87F1009B00C3 /* MenuItem.swift */; };
+		284A02AA2C0B63A500A5D93B /* VpnGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */; };
+		284A02AC2C0B63A500A5D93B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02AB2C0B63A500A5D93B /* ContentView.swift */; };
+		284A02AE2C0B63A700A5D93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A02AD2C0B63A700A5D93B /* Assets.xcassets */; };
+		284A02B12C0B63A700A5D93B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A02B02C0B63A700A5D93B /* Preview Assets.xcassets */; };
+		284A02BC2C0B642800A5D93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02BB2C0B642800A5D93B /* AppDelegate.swift */; };
+		285601E62C16FB04006DBFB2 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601E52C16FB04006DBFB2 /* PaywallManager.swift */; };
+		285601EB2C16FB43006DBFB2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601EA2C16FB42006DBFB2 /* AppConstants.swift */; };
+		285601EE2C174926006DBFB2 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 285601ED2C174926006DBFB2 /* Adapty */; };
+		285601F22C174A0F006DBFB2 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */; };
+		285601F32C174A0F006DBFB2 /* PaywallDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */; };
+		285601F82C174A56006DBFB2 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F42C174A56006DBFB2 /* Color+Hex.swift */; };
+		285601F92C174A56006DBFB2 /* Image+Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F52C174A56006DBFB2 /* Image+Gallery.swift */; };
+		285601FA2C174A56006DBFB2 /* Color+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F62C174A56006DBFB2 /* Color+Palette.swift */; };
+		285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F72C174A56006DBFB2 /* View+isHidden.swift */; };
+		285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FC2C174B2F006DBFB2 /* PaywallView.swift */; };
+		285601FF2C174B65006DBFB2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FE2C174B65006DBFB2 /* UserService.swift */; };
+		28B0CCF92C0E82B400157779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCF82C0E82B400157779 /* HomeView.swift */; };
+		28B0CCFD2C0E838300157779 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFC2C0E838300157779 /* RateView.swift */; };
+		28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFF2C0E839A00157779 /* SettingsView.swift */; };
+		28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD022C0E83AE00157779 /* SpeedTestView.swift */; };
+		28B0CD052C0E890D00157779 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD042C0E890A00157779 /* ViewExt.swift */; };
+		28D1B1D92C0CFED300856A7C /* VpnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1D82C0CFED300856A7C /* VpnService.swift */; };
+		28D1B1DB2C0CFF2700856A7C /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */; };
+		28D1B1DD2C0D083900856A7C /* VpnConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1DC2C0D083900856A7C /* VpnConfig.swift */; };
+		28D1B21A2C0D0AD400856A7C /* uk2-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1DF2C0D0AD300856A7C /* uk2-tcp443.ovpn */; };
+		28D1B21B2C0D0AD400856A7C /* uk2-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E02C0D0AD300856A7C /* uk2-udp25000.ovpn */; };
+		28D1B21C2C0D0AD400856A7C /* uk2-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E12C0D0AD300856A7C /* uk2-udp53.ovpn */; };
+		28D1B21D2C0D0AD400856A7C /* uk2-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E22C0D0AD300856A7C /* uk2-tcp80.ovpn */; };
+		28D1B21E2C0D0AD400856A7C /* us2-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E42C0D0AD300856A7C /* us2-tcp80.ovpn */; };
+		28D1B21F2C0D0AD400856A7C /* us2-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E52C0D0AD300856A7C /* us2-udp53.ovpn */; };
+		28D1B2202C0D0AD400856A7C /* us2-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E62C0D0AD300856A7C /* us2-udp25000.ovpn */; };
+		28D1B2212C0D0AD400856A7C /* us2-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E72C0D0AD300856A7C /* us2-tcp443.ovpn */; };
+		28D1B2222C0D0AD400856A7C /* ca196-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E92C0D0AD300856A7C /* ca196-udp25000.ovpn */; };
+		28D1B2232C0D0AD400856A7C /* ca196-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1EA2C0D0AD300856A7C /* ca196-tcp80.ovpn */; };
+		28D1B2242C0D0AD400856A7C /* ca196-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1EB2C0D0AD300856A7C /* ca196-tcp443.ovpn */; };
+		28D1B2252C0D0AD400856A7C /* ca196-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1EC2C0D0AD300856A7C /* ca196-udp53.ovpn */; };
+		28D1B2262C0D0AD400856A7C /* de20-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1EE2C0D0AD300856A7C /* de20-tcp443.ovpn */; };
+		28D1B2272C0D0AD400856A7C /* de20-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1EF2C0D0AD300856A7C /* de20-tcp80.ovpn */; };
+		28D1B2282C0D0AD400856A7C /* de20-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F02C0D0AD300856A7C /* de20-udp53.ovpn */; };
+		28D1B2292C0D0AD400856A7C /* de20-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F12C0D0AD400856A7C /* de20-udp25000.ovpn */; };
+		28D1B22A2C0D0AD400856A7C /* de220-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F32C0D0AD400856A7C /* de220-udp53.ovpn */; };
+		28D1B22B2C0D0AD400856A7C /* de220-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F42C0D0AD400856A7C /* de220-udp25000.ovpn */; };
+		28D1B22C2C0D0AD400856A7C /* de220-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F52C0D0AD400856A7C /* de220-tcp443.ovpn */; };
+		28D1B22D2C0D0AD400856A7C /* de220-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F62C0D0AD400856A7C /* de220-tcp80.ovpn */; };
+		28D1B22E2C0D0AD400856A7C /* us1-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F82C0D0AD400856A7C /* us1-udp53.ovpn */; };
+		28D1B22F2C0D0AD400856A7C /* us1-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1F92C0D0AD400856A7C /* us1-tcp443.ovpn */; };
+		28D1B2302C0D0AD400856A7C /* us1-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1FA2C0D0AD400856A7C /* us1-tcp80.ovpn */; };
+		28D1B2312C0D0AD400856A7C /* us1-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1FB2C0D0AD400856A7C /* us1-udp25000.ovpn */; };
+		28D1B2322C0D0AD400856A7C /* fr200-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1FD2C0D0AD400856A7C /* fr200-udp53.ovpn */; };
+		28D1B2332C0D0AD400856A7C /* fr200-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1FE2C0D0AD400856A7C /* fr200-tcp80.ovpn */; };
+		28D1B2342C0D0AD400856A7C /* fr200-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1FF2C0D0AD400856A7C /* fr200-udp25000.ovpn */; };
+		28D1B2352C0D0AD400856A7C /* fr200-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2002C0D0AD400856A7C /* fr200-tcp443.ovpn */; };
+		28D1B2362C0D0AD400856A7C /* pl134-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2022C0D0AD400856A7C /* pl134-udp53.ovpn */; };
+		28D1B2372C0D0AD400856A7C /* pl134-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2032C0D0AD400856A7C /* pl134-tcp80.ovpn */; };
+		28D1B2382C0D0AD400856A7C /* pl134-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2042C0D0AD400856A7C /* pl134-tcp443.ovpn */; };
+		28D1B2392C0D0AD400856A7C /* pl134-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2052C0D0AD400856A7C /* pl134-udp25000.ovpn */; };
+		28D1B23A2C0D0AD400856A7C /* pl140-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2072C0D0AD400856A7C /* pl140-udp53.ovpn */; };
+		28D1B23B2C0D0AD400856A7C /* pl140-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2082C0D0AD400856A7C /* pl140-tcp443.ovpn */; };
+		28D1B23C2C0D0AD400856A7C /* pl140-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2092C0D0AD400856A7C /* pl140-tcp80.ovpn */; };
+		28D1B23D2C0D0AD400856A7C /* pl140-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B20A2C0D0AD400856A7C /* pl140-udp25000.ovpn */; };
+		28D1B23E2C0D0AD400856A7C /* ca149-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B20C2C0D0AD400856A7C /* ca149-tcp443.ovpn */; };
+		28D1B23F2C0D0AD400856A7C /* ca149-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B20D2C0D0AD400856A7C /* ca149-udp53.ovpn */; };
+		28D1B2402C0D0AD400856A7C /* ca149-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B20E2C0D0AD400856A7C /* ca149-tcp80.ovpn */; };
+		28D1B2412C0D0AD400856A7C /* ca149-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B20F2C0D0AD400856A7C /* ca149-udp25000.ovpn */; };
+		28D1B2422C0D0AD400856A7C /* fr231-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2112C0D0AD400856A7C /* fr231-udp25000.ovpn */; };
+		28D1B2432C0D0AD400856A7C /* fr231-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2122C0D0AD400856A7C /* fr231-tcp80.ovpn */; };
+		28D1B2442C0D0AD400856A7C /* fr231-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2132C0D0AD400856A7C /* fr231-udp53.ovpn */; };
+		28D1B2452C0D0AD400856A7C /* fr231-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2142C0D0AD400856A7C /* fr231-tcp443.ovpn */; };
+		28D1B2462C0D0AD400856A7C /* uk1-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2162C0D0AD400856A7C /* uk1-udp25000.ovpn */; };
+		28D1B2472C0D0AD400856A7C /* uk1-tcp80.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2172C0D0AD400856A7C /* uk1-tcp80.ovpn */; };
+		28D1B2482C0D0AD400856A7C /* uk1-udp53.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2182C0D0AD400856A7C /* uk1-udp53.ovpn */; };
+		28D1B2492C0D0AD400856A7C /* uk1-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B2192C0D0AD400856A7C /* uk1-tcp443.ovpn */; };
+		28D1B24B2C0D150800856A7C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */; };
+		28D1B24D2C0D15C600856A7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D1B24C2C0D15C600856A7C /* UIKit.framework */; };
+		28D1B2522C0D192000856A7C /* OpenVPNAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 28D1B2512C0D192000856A7C /* OpenVPNAdapter */; };
+		28D1B25E2C0DE1E000856A7C /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B25D2C0DE1E000856A7C /* Then.swift */; };
+		28D1B2612C0DED4100856A7C /* Int64Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B2602C0DED4100856A7C /* Int64Extention.swift */; };
+		28D1B2632C0E539100856A7C /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B2622C0E539100856A7C /* SideMenuView.swift */; };
+		28D1B2652C0E547B00856A7C /* UIScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B2642C0E547B00856A7C /* UIScreenExtention.swift */; };
+		28D3391C2C0CAA9C00BBDEB1 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3391B2C0CAA9C00BBDEB1 /* CountryListView.swift */; };
+		28D3391F2C0CAFE400BBDEB1 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3391E2C0CAFE400BBDEB1 /* CountryModel.swift */; };
+		28D339212C0CB3D900BBDEB1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D339202C0CB3D900BBDEB1 /* ContentViewModel.swift */; };
+		28D3392D2C0CCD6A00BBDEB1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */; };
+		28D339302C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */; };
+		28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B72C12568100EBEB4D /* TermsView.swift */; };
+		28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */; };
+		28ECD2BC2C12F74000EBEB4D /* StoreExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28D339332C0CCD6B00BBDEB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284A029E2C0B63A500A5D93B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D339292C0CCD6A00BBDEB1;
+			remoteInfo = NetworkFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		28D339392C0CCD6B00BBDEB1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestViewModel.swift; sourceTree = "<group>"; };
+		2824830F2C0F87F1009B00C3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		284A02A62C0B63A500A5D93B /* VpnGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VpnGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnGuardApp.swift; sourceTree = "<group>"; };
+		284A02AB2C0B63A500A5D93B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		284A02AD2C0B63A700A5D93B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		284A02B02C0B63A700A5D93B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		284A02BB2C0B642800A5D93B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		285601E52C16FB04006DBFB2 /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
+		285601EA2C16FB42006DBFB2 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallDataDTO.swift; sourceTree = "<group>"; };
+		285601F42C174A56006DBFB2 /* Color+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		285601F52C174A56006DBFB2 /* Image+Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Gallery.swift"; sourceTree = "<group>"; };
+		285601F62C174A56006DBFB2 /* Color+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Palette.swift"; sourceTree = "<group>"; };
+		285601F72C174A56006DBFB2 /* View+isHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+isHidden.swift"; sourceTree = "<group>"; };
+		285601FC2C174B2F006DBFB2 /* PaywallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		285601FE2C174B65006DBFB2 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		28B0CCF82C0E82B400157779 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		28B0CCFC2C0E838300157779 /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
+		28B0CCFF2C0E839A00157779 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		28B0CD022C0E83AE00157779 /* SpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestView.swift; sourceTree = "<group>"; };
+		28B0CD042C0E890A00157779 /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		28D1B1D82C0CFED300856A7C /* VpnService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnService.swift; sourceTree = "<group>"; };
+		28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		28D1B1DC2C0D083900856A7C /* VpnConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnConfig.swift; sourceTree = "<group>"; };
+		28D1B1DF2C0D0AD300856A7C /* uk2-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1E02C0D0AD300856A7C /* uk2-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1E12C0D0AD300856A7C /* uk2-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1E22C0D0AD300856A7C /* uk2-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1E42C0D0AD300856A7C /* us2-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us2-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1E52C0D0AD300856A7C /* us2-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us2-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1E62C0D0AD300856A7C /* us2-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us2-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1E72C0D0AD300856A7C /* us2-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us2-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1E92C0D0AD300856A7C /* ca196-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca196-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1EA2C0D0AD300856A7C /* ca196-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca196-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1EB2C0D0AD300856A7C /* ca196-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca196-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1EC2C0D0AD300856A7C /* ca196-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca196-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1EE2C0D0AD300856A7C /* de20-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de20-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1EF2C0D0AD300856A7C /* de20-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de20-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1F02C0D0AD300856A7C /* de20-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de20-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1F12C0D0AD400856A7C /* de20-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de20-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1F32C0D0AD400856A7C /* de220-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de220-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1F42C0D0AD400856A7C /* de220-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de220-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1F52C0D0AD400856A7C /* de220-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de220-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1F62C0D0AD400856A7C /* de220-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "de220-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1F82C0D0AD400856A7C /* us1-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us1-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1F92C0D0AD400856A7C /* us1-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us1-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B1FA2C0D0AD400856A7C /* us1-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us1-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1FB2C0D0AD400856A7C /* us1-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "us1-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B1FD2C0D0AD400856A7C /* fr200-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr200-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B1FE2C0D0AD400856A7C /* fr200-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr200-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B1FF2C0D0AD400856A7C /* fr200-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr200-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B2002C0D0AD400856A7C /* fr200-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr200-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B2022C0D0AD400856A7C /* pl134-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl134-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B2032C0D0AD400856A7C /* pl134-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl134-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B2042C0D0AD400856A7C /* pl134-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl134-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B2052C0D0AD400856A7C /* pl134-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl134-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B2072C0D0AD400856A7C /* pl140-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl140-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B2082C0D0AD400856A7C /* pl140-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl140-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B2092C0D0AD400856A7C /* pl140-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl140-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B20A2C0D0AD400856A7C /* pl140-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pl140-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B20C2C0D0AD400856A7C /* ca149-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca149-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B20D2C0D0AD400856A7C /* ca149-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca149-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B20E2C0D0AD400856A7C /* ca149-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca149-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B20F2C0D0AD400856A7C /* ca149-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ca149-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B2112C0D0AD400856A7C /* fr231-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr231-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B2122C0D0AD400856A7C /* fr231-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr231-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B2132C0D0AD400856A7C /* fr231-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr231-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B2142C0D0AD400856A7C /* fr231-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fr231-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B2162C0D0AD400856A7C /* uk1-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk1-udp25000.ovpn"; sourceTree = "<group>"; };
+		28D1B2172C0D0AD400856A7C /* uk1-tcp80.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk1-tcp80.ovpn"; sourceTree = "<group>"; };
+		28D1B2182C0D0AD400856A7C /* uk1-udp53.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk1-udp53.ovpn"; sourceTree = "<group>"; };
+		28D1B2192C0D0AD400856A7C /* uk1-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk1-tcp443.ovpn"; sourceTree = "<group>"; };
+		28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		28D1B24C2C0D15C600856A7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28D1B25D2C0DE1E000856A7C /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		28D1B2602C0DED4100856A7C /* Int64Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64Extention.swift; sourceTree = "<group>"; };
+		28D1B2622C0E539100856A7C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		28D1B2642C0E547B00856A7C /* UIScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtention.swift; sourceTree = "<group>"; };
+		28D3391B2C0CAA9C00BBDEB1 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		28D3391E2C0CAFE400BBDEB1 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		28D339202C0CB3D900BBDEB1 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		28D339222C0CC80400BBDEB1 /* VpnGuard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VpnGuard.entitlements; sourceTree = "<group>"; };
+		28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetworkFlow.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		28D339312C0CCD6B00BBDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D339322C0CCD6B00BBDEB1 /* NetworkFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkFlow.entitlements; sourceTree = "<group>"; };
+		28ECD2B72C12568100EBEB4D /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
+		28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreExtention.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		284A02A32C0B63A500A5D93B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
+				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
+				285601EE2C174926006DBFB2 /* Adapty in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D339272C0CCD6A00BBDEB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D3392D2C0CCD6A00BBDEB1 /* NetworkExtension.framework in Frameworks */,
+				28D1B2522C0D192000856A7C /* OpenVPNAdapter in Frameworks */,
+				28D1B24D2C0D15C600856A7C /* UIKit.framework in Frameworks */,
+				28D1B24B2C0D150800856A7C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284A029D2C0B63A500A5D93B = {
+			isa = PBXGroup;
+			children = (
+				284A02A82C0B63A500A5D93B /* VpnGuard */,
+				28D3392E2C0CCD6B00BBDEB1 /* NetworkFlow */,
+				28D3392B2C0CCD6A00BBDEB1 /* Frameworks */,
+				284A02A72C0B63A500A5D93B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		284A02A72C0B63A500A5D93B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				284A02A62C0B63A500A5D93B /* VpnGuard.app */,
+				28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		284A02A82C0B63A500A5D93B /* VpnGuard */ = {
+			isa = PBXGroup;
+			children = (
+				28D3393E2C0CD2D900BBDEB1 /* Resources */,
+				28D339222C0CC80400BBDEB1 /* VpnGuard.entitlements */,
+				284A02B92C0B63D100A5D93B /* Core */,
+				284A02B82C0B63C500A5D93B /* Modules */,
+				284A02B72C0B63BE00A5D93B /* App */,
+				284A02AF2C0B63A700A5D93B /* Preview Content */,
+			);
+			path = VpnGuard;
+			sourceTree = "<group>";
+		};
+		284A02AF2C0B63A700A5D93B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				284A02B02C0B63A700A5D93B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		284A02B72C0B63BE00A5D93B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */,
+				284A02BB2C0B642800A5D93B /* AppDelegate.swift */,
+				285601EA2C16FB42006DBFB2 /* AppConstants.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		284A02B82C0B63C500A5D93B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				285601EF2C1749C9006DBFB2 /* Paywall */,
+				28ECD2B62C12565400EBEB4D /* Terms */,
+				28B0CD012C0E839E00157779 /* SpeedTest */,
+				28B0CCFB2C0E836C00157779 /* Rate */,
+				28B0CCFA2C0E836500157779 /* Settings */,
+				28B0CCF72C0E829F00157779 /* Home */,
+				284A02C42C0BD16100A5D93B /* Menu */,
+				284A02C32C0BD15100A5D93B /* CountryList */,
+				284A02BA2C0B63DC00A5D93B /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		284A02B92C0B63D100A5D93B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B25F2C0DED2D00856A7C /* Extention */,
+				28D3393C2C0CD26000BBDEB1 /* Service */,
+				28D3391D2C0CAFCF00BBDEB1 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		284A02BA2C0B63DC00A5D93B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				284A02AB2C0B63A500A5D93B /* ContentView.swift */,
+				28D339202C0CB3D900BBDEB1 /* ContentViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		284A02C32C0BD15100A5D93B /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				28D3391B2C0CAA9C00BBDEB1 /* CountryListView.swift */,
+			);
+			path = CountryList;
+			sourceTree = "<group>";
+		};
+		284A02C42C0BD16100A5D93B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B2622C0E539100856A7C /* SideMenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		285601E42C16FAF1006DBFB2 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				285601FE2C174B65006DBFB2 /* UserService.swift */,
+				285601E52C16FB04006DBFB2 /* PaywallManager.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		285601EF2C1749C9006DBFB2 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				285601FC2C174B2F006DBFB2 /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		28B0CCF72C0E829F00157779 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				28B0CCF82C0E82B400157779 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		28B0CCFA2C0E836500157779 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				28B0CCFF2C0E839A00157779 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		28B0CCFB2C0E836C00157779 /* Rate */ = {
+			isa = PBXGroup;
+			children = (
+				28B0CCFC2C0E838300157779 /* RateView.swift */,
+			);
+			path = Rate;
+			sourceTree = "<group>";
+		};
+		28B0CD012C0E839E00157779 /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				28B0CD022C0E83AE00157779 /* SpeedTestView.swift */,
+				282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		28D1B1DE2C0D0AD300856A7C /* vpnbook-openvpn-uk205 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1DF2C0D0AD300856A7C /* uk2-tcp443.ovpn */,
+				28D1B1E02C0D0AD300856A7C /* uk2-udp25000.ovpn */,
+				28D1B1E12C0D0AD300856A7C /* uk2-udp53.ovpn */,
+				28D1B1E22C0D0AD300856A7C /* uk2-tcp80.ovpn */,
+			);
+			path = "vpnbook-openvpn-uk205";
+			sourceTree = "<group>";
+		};
+		28D1B1E32C0D0AD300856A7C /* vpnbook-openvpn-us2 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1E42C0D0AD300856A7C /* us2-tcp80.ovpn */,
+				28D1B1E52C0D0AD300856A7C /* us2-udp53.ovpn */,
+				28D1B1E62C0D0AD300856A7C /* us2-udp25000.ovpn */,
+				28D1B1E72C0D0AD300856A7C /* us2-tcp443.ovpn */,
+			);
+			path = "vpnbook-openvpn-us2";
+			sourceTree = "<group>";
+		};
+		28D1B1E82C0D0AD300856A7C /* vpnbook-openvpn-ca196 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1E92C0D0AD300856A7C /* ca196-udp25000.ovpn */,
+				28D1B1EA2C0D0AD300856A7C /* ca196-tcp80.ovpn */,
+				28D1B1EB2C0D0AD300856A7C /* ca196-tcp443.ovpn */,
+				28D1B1EC2C0D0AD300856A7C /* ca196-udp53.ovpn */,
+			);
+			path = "vpnbook-openvpn-ca196";
+			sourceTree = "<group>";
+		};
+		28D1B1ED2C0D0AD300856A7C /* vpnbook-openvpn-de20 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1EE2C0D0AD300856A7C /* de20-tcp443.ovpn */,
+				28D1B1EF2C0D0AD300856A7C /* de20-tcp80.ovpn */,
+				28D1B1F02C0D0AD300856A7C /* de20-udp53.ovpn */,
+				28D1B1F12C0D0AD400856A7C /* de20-udp25000.ovpn */,
+			);
+			path = "vpnbook-openvpn-de20";
+			sourceTree = "<group>";
+		};
+		28D1B1F22C0D0AD400856A7C /* vpnbook-openvpn-de220 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1F32C0D0AD400856A7C /* de220-udp53.ovpn */,
+				28D1B1F42C0D0AD400856A7C /* de220-udp25000.ovpn */,
+				28D1B1F52C0D0AD400856A7C /* de220-tcp443.ovpn */,
+				28D1B1F62C0D0AD400856A7C /* de220-tcp80.ovpn */,
+			);
+			path = "vpnbook-openvpn-de220";
+			sourceTree = "<group>";
+		};
+		28D1B1F72C0D0AD400856A7C /* vpnbook-openvpn-us1 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1F82C0D0AD400856A7C /* us1-udp53.ovpn */,
+				28D1B1F92C0D0AD400856A7C /* us1-tcp443.ovpn */,
+				28D1B1FA2C0D0AD400856A7C /* us1-tcp80.ovpn */,
+				28D1B1FB2C0D0AD400856A7C /* us1-udp25000.ovpn */,
+			);
+			path = "vpnbook-openvpn-us1";
+			sourceTree = "<group>";
+		};
+		28D1B1FC2C0D0AD400856A7C /* vpnbook-openvpn-fr200 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1FD2C0D0AD400856A7C /* fr200-udp53.ovpn */,
+				28D1B1FE2C0D0AD400856A7C /* fr200-tcp80.ovpn */,
+				28D1B1FF2C0D0AD400856A7C /* fr200-udp25000.ovpn */,
+				28D1B2002C0D0AD400856A7C /* fr200-tcp443.ovpn */,
+			);
+			path = "vpnbook-openvpn-fr200";
+			sourceTree = "<group>";
+		};
+		28D1B2012C0D0AD400856A7C /* vpnbook-openvpn-pl134 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B2022C0D0AD400856A7C /* pl134-udp53.ovpn */,
+				28D1B2032C0D0AD400856A7C /* pl134-tcp80.ovpn */,
+				28D1B2042C0D0AD400856A7C /* pl134-tcp443.ovpn */,
+				28D1B2052C0D0AD400856A7C /* pl134-udp25000.ovpn */,
+			);
+			path = "vpnbook-openvpn-pl134";
+			sourceTree = "<group>";
+		};
+		28D1B2062C0D0AD400856A7C /* vpnbook-openvpn-pl140 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B2072C0D0AD400856A7C /* pl140-udp53.ovpn */,
+				28D1B2082C0D0AD400856A7C /* pl140-tcp443.ovpn */,
+				28D1B2092C0D0AD400856A7C /* pl140-tcp80.ovpn */,
+				28D1B20A2C0D0AD400856A7C /* pl140-udp25000.ovpn */,
+			);
+			path = "vpnbook-openvpn-pl140";
+			sourceTree = "<group>";
+		};
+		28D1B20B2C0D0AD400856A7C /* vpnbook-openvpn-ca149 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B20C2C0D0AD400856A7C /* ca149-tcp443.ovpn */,
+				28D1B20D2C0D0AD400856A7C /* ca149-udp53.ovpn */,
+				28D1B20E2C0D0AD400856A7C /* ca149-tcp80.ovpn */,
+				28D1B20F2C0D0AD400856A7C /* ca149-udp25000.ovpn */,
+			);
+			path = "vpnbook-openvpn-ca149";
+			sourceTree = "<group>";
+		};
+		28D1B2102C0D0AD400856A7C /* vpnbook-openvpn-fr231 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B2112C0D0AD400856A7C /* fr231-udp25000.ovpn */,
+				28D1B2122C0D0AD400856A7C /* fr231-tcp80.ovpn */,
+				28D1B2132C0D0AD400856A7C /* fr231-udp53.ovpn */,
+				28D1B2142C0D0AD400856A7C /* fr231-tcp443.ovpn */,
+			);
+			path = "vpnbook-openvpn-fr231";
+			sourceTree = "<group>";
+		};
+		28D1B2152C0D0AD400856A7C /* vpnbook-openvpn-uk68 */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B2162C0D0AD400856A7C /* uk1-udp25000.ovpn */,
+				28D1B2172C0D0AD400856A7C /* uk1-tcp80.ovpn */,
+				28D1B2182C0D0AD400856A7C /* uk1-udp53.ovpn */,
+				28D1B2192C0D0AD400856A7C /* uk1-tcp443.ovpn */,
+			);
+			path = "vpnbook-openvpn-uk68";
+			sourceTree = "<group>";
+		};
+		28D1B25F2C0DED2D00856A7C /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				285601F42C174A56006DBFB2 /* Color+Hex.swift */,
+				285601F62C174A56006DBFB2 /* Color+Palette.swift */,
+				285601F52C174A56006DBFB2 /* Image+Gallery.swift */,
+				285601F72C174A56006DBFB2 /* View+isHidden.swift */,
+				28B0CD042C0E890A00157779 /* ViewExt.swift */,
+				28D1B2602C0DED4100856A7C /* Int64Extention.swift */,
+				28D1B2642C0E547B00856A7C /* UIScreenExtention.swift */,
+				28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		28D3391D2C0CAFCF00BBDEB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */,
+				285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */,
+				28D3391E2C0CAFE400BBDEB1 /* CountryModel.swift */,
+				28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */,
+				282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */,
+				2824830F2C0F87F1009B00C3 /* MenuItem.swift */,
+				28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		28D3392B2C0CCD6A00BBDEB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B24C2C0D15C600856A7C /* UIKit.framework */,
+				28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */,
+				28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28D3392E2C0CCD6B00BBDEB1 /* NetworkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */,
+				28D1B25D2C0DE1E000856A7C /* Then.swift */,
+				28D339312C0CCD6B00BBDEB1 /* Info.plist */,
+				28D339322C0CCD6B00BBDEB1 /* NetworkFlow.entitlements */,
+			);
+			path = NetworkFlow;
+			sourceTree = "<group>";
+		};
+		28D3393C2C0CD26000BBDEB1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				285601E42C16FAF1006DBFB2 /* Paywall */,
+				28D3393D2C0CD26D00BBDEB1 /* VpnService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		28D3393D2C0CD26D00BBDEB1 /* VpnService */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B1D82C0CFED300856A7C /* VpnService.swift */,
+				28D1B1DC2C0D083900856A7C /* VpnConfig.swift */,
+			);
+			path = VpnService;
+			sourceTree = "<group>";
+		};
+		28D3393E2C0CD2D900BBDEB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28D3393F2C0CD2E500BBDEB1 /* Configs */,
+				284A02AD2C0B63A700A5D93B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		28D3393F2C0CD2E500BBDEB1 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				28D1B20B2C0D0AD400856A7C /* vpnbook-openvpn-ca149 */,
+				28D1B1E82C0D0AD300856A7C /* vpnbook-openvpn-ca196 */,
+				28D1B1ED2C0D0AD300856A7C /* vpnbook-openvpn-de20 */,
+				28D1B1F22C0D0AD400856A7C /* vpnbook-openvpn-de220 */,
+				28D1B1FC2C0D0AD400856A7C /* vpnbook-openvpn-fr200 */,
+				28D1B2102C0D0AD400856A7C /* vpnbook-openvpn-fr231 */,
+				28D1B2012C0D0AD400856A7C /* vpnbook-openvpn-pl134 */,
+				28D1B2062C0D0AD400856A7C /* vpnbook-openvpn-pl140 */,
+				28D1B2152C0D0AD400856A7C /* vpnbook-openvpn-uk68 */,
+				28D1B1DE2C0D0AD300856A7C /* vpnbook-openvpn-uk205 */,
+				28D1B1F72C0D0AD400856A7C /* vpnbook-openvpn-us1 */,
+				28D1B1E32C0D0AD300856A7C /* vpnbook-openvpn-us2 */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		28ECD2B62C12565400EBEB4D /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				28ECD2B72C12568100EBEB4D /* TermsView.swift */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		284A02A52C0B63A500A5D93B /* VpnGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284A02B42C0B63A700A5D93B /* Build configuration list for PBXNativeTarget "VpnGuard" */;
+			buildPhases = (
+				284A02A22C0B63A500A5D93B /* Sources */,
+				284A02A32C0B63A500A5D93B /* Frameworks */,
+				284A02A42C0B63A500A5D93B /* Resources */,
+				28D339392C0CCD6B00BBDEB1 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28D339342C0CCD6B00BBDEB1 /* PBXTargetDependency */,
+			);
+			name = VpnGuard;
+			packageProductDependencies = (
+				2824830A2C0F59DC009B00C3 /* InternetSpeed */,
+				2824830D2C0F5BA9009B00C3 /* NDT7 */,
+				285601ED2C174926006DBFB2 /* Adapty */,
+			);
+			productName = VpnGuard;
+			productReference = 284A02A62C0B63A500A5D93B /* VpnGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28D339292C0CCD6A00BBDEB1 /* NetworkFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D339362C0CCD6B00BBDEB1 /* Build configuration list for PBXNativeTarget "NetworkFlow" */;
+			buildPhases = (
+				28D339262C0CCD6A00BBDEB1 /* Sources */,
+				28D339272C0CCD6A00BBDEB1 /* Frameworks */,
+				28D339282C0CCD6A00BBDEB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkFlow;
+			packageProductDependencies = (
+				28D1B2512C0D192000856A7C /* OpenVPNAdapter */,
+			);
+			productName = NetworkFlow;
+			productReference = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		284A029E2C0B63A500A5D93B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					284A02A52C0B63A500A5D93B = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					28D339292C0CCD6A00BBDEB1 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 284A02A12C0B63A500A5D93B /* Build configuration list for PBXProject "VpnGuard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 284A029D2C0B63A500A5D93B;
+			packageReferences = (
+				28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */,
+				282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */,
+				2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */,
+				285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
+			);
+			productRefGroup = 284A02A72C0B63A500A5D93B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				284A02A52C0B63A500A5D93B /* VpnGuard */,
+				28D339292C0CCD6A00BBDEB1 /* NetworkFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		284A02A42C0B63A500A5D93B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D1B2442C0D0AD400856A7C /* fr231-udp53.ovpn in Resources */,
+				28D1B23E2C0D0AD400856A7C /* ca149-tcp443.ovpn in Resources */,
+				28D1B2242C0D0AD400856A7C /* ca196-tcp443.ovpn in Resources */,
+				28D1B2402C0D0AD400856A7C /* ca149-tcp80.ovpn in Resources */,
+				28D1B21B2C0D0AD400856A7C /* uk2-udp25000.ovpn in Resources */,
+				28D1B2302C0D0AD400856A7C /* us1-tcp80.ovpn in Resources */,
+				28D1B2232C0D0AD400856A7C /* ca196-tcp80.ovpn in Resources */,
+				28D1B23F2C0D0AD400856A7C /* ca149-udp53.ovpn in Resources */,
+				28D1B2492C0D0AD400856A7C /* uk1-tcp443.ovpn in Resources */,
+				28D1B21C2C0D0AD400856A7C /* uk2-udp53.ovpn in Resources */,
+				28D1B2372C0D0AD400856A7C /* pl134-tcp80.ovpn in Resources */,
+				28D1B21D2C0D0AD400856A7C /* uk2-tcp80.ovpn in Resources */,
+				28D1B22E2C0D0AD400856A7C /* us1-udp53.ovpn in Resources */,
+				28D1B2202C0D0AD400856A7C /* us2-udp25000.ovpn in Resources */,
+				28D1B2482C0D0AD400856A7C /* uk1-udp53.ovpn in Resources */,
+				28D1B2392C0D0AD400856A7C /* pl134-udp25000.ovpn in Resources */,
+				28D1B2362C0D0AD400856A7C /* pl134-udp53.ovpn in Resources */,
+				28D1B2222C0D0AD400856A7C /* ca196-udp25000.ovpn in Resources */,
+				28D1B2292C0D0AD400856A7C /* de20-udp25000.ovpn in Resources */,
+				28D1B22C2C0D0AD400856A7C /* de220-tcp443.ovpn in Resources */,
+				28D1B21F2C0D0AD400856A7C /* us2-udp53.ovpn in Resources */,
+				284A02B12C0B63A700A5D93B /* Preview Assets.xcassets in Resources */,
+				28D1B21A2C0D0AD400856A7C /* uk2-tcp443.ovpn in Resources */,
+				28D1B21E2C0D0AD400856A7C /* us2-tcp80.ovpn in Resources */,
+				28D1B2322C0D0AD400856A7C /* fr200-udp53.ovpn in Resources */,
+				28D1B23C2C0D0AD400856A7C /* pl140-tcp80.ovpn in Resources */,
+				28D1B2432C0D0AD400856A7C /* fr231-tcp80.ovpn in Resources */,
+				28D1B2412C0D0AD400856A7C /* ca149-udp25000.ovpn in Resources */,
+				28D1B2342C0D0AD400856A7C /* fr200-udp25000.ovpn in Resources */,
+				28D1B2452C0D0AD400856A7C /* fr231-tcp443.ovpn in Resources */,
+				28D1B2272C0D0AD400856A7C /* de20-tcp80.ovpn in Resources */,
+				28D1B22D2C0D0AD400856A7C /* de220-tcp80.ovpn in Resources */,
+				28D1B2472C0D0AD400856A7C /* uk1-tcp80.ovpn in Resources */,
+				28D1B2422C0D0AD400856A7C /* fr231-udp25000.ovpn in Resources */,
+				28D1B2352C0D0AD400856A7C /* fr200-tcp443.ovpn in Resources */,
+				28D1B23D2C0D0AD400856A7C /* pl140-udp25000.ovpn in Resources */,
+				284A02AE2C0B63A700A5D93B /* Assets.xcassets in Resources */,
+				28D1B2282C0D0AD400856A7C /* de20-udp53.ovpn in Resources */,
+				28D1B2212C0D0AD400856A7C /* us2-tcp443.ovpn in Resources */,
+				28D1B22A2C0D0AD400856A7C /* de220-udp53.ovpn in Resources */,
+				28D1B22F2C0D0AD400856A7C /* us1-tcp443.ovpn in Resources */,
+				28D1B2332C0D0AD400856A7C /* fr200-tcp80.ovpn in Resources */,
+				28D1B2252C0D0AD400856A7C /* ca196-udp53.ovpn in Resources */,
+				28D1B23B2C0D0AD400856A7C /* pl140-tcp443.ovpn in Resources */,
+				28D1B22B2C0D0AD400856A7C /* de220-udp25000.ovpn in Resources */,
+				28D1B2312C0D0AD400856A7C /* us1-udp25000.ovpn in Resources */,
+				28D1B2462C0D0AD400856A7C /* uk1-udp25000.ovpn in Resources */,
+				28D1B23A2C0D0AD400856A7C /* pl140-udp53.ovpn in Resources */,
+				28D1B2262C0D0AD400856A7C /* de20-tcp443.ovpn in Resources */,
+				28D1B2382C0D0AD400856A7C /* pl134-tcp443.ovpn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D339282C0CCD6A00BBDEB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		284A02A22C0B63A500A5D93B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */,
+				285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */,
+				284A02BC2C0B642800A5D93B /* AppDelegate.swift in Sources */,
+				28B0CD052C0E890D00157779 /* ViewExt.swift in Sources */,
+				285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */,
+				28D1B1D92C0CFED300856A7C /* VpnService.swift in Sources */,
+				282483082C0F3385009B00C3 /* SpeedTestViewModel.swift in Sources */,
+				28B0CCF92C0E82B400157779 /* HomeView.swift in Sources */,
+				28D1B2652C0E547B00856A7C /* UIScreenExtention.swift in Sources */,
+				28D1B2612C0DED4100856A7C /* Int64Extention.swift in Sources */,
+				284A02AC2C0B63A500A5D93B /* ContentView.swift in Sources */,
+				282483102C0F87F1009B00C3 /* MenuItem.swift in Sources */,
+				28D1B2632C0E539100856A7C /* SideMenuView.swift in Sources */,
+				28D339212C0CB3D900BBDEB1 /* ContentViewModel.swift in Sources */,
+				285601F32C174A0F006DBFB2 /* PaywallDataDTO.swift in Sources */,
+				285601E62C16FB04006DBFB2 /* PaywallManager.swift in Sources */,
+				28B0CCFD2C0E838300157779 /* RateView.swift in Sources */,
+				285601FF2C174B65006DBFB2 /* UserService.swift in Sources */,
+				285601F92C174A56006DBFB2 /* Image+Gallery.swift in Sources */,
+				28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */,
+				28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */,
+				28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */,
+				28D1B1DD2C0D083900856A7C /* VpnConfig.swift in Sources */,
+				28D1B1DB2C0CFF2700856A7C /* NetworkProtocol.swift in Sources */,
+				285601EB2C16FB43006DBFB2 /* AppConstants.swift in Sources */,
+				285601F82C174A56006DBFB2 /* Color+Hex.swift in Sources */,
+				285601FA2C174A56006DBFB2 /* Color+Palette.swift in Sources */,
+				28ECD2BC2C12F74000EBEB4D /* StoreExtention.swift in Sources */,
+				285601F22C174A0F006DBFB2 /* PaywallViewModel.swift in Sources */,
+				284A02AA2C0B63A500A5D93B /* VpnGuardApp.swift in Sources */,
+				28D3391C2C0CAA9C00BBDEB1 /* CountryListView.swift in Sources */,
+				28D3391F2C0CAFE400BBDEB1 /* CountryModel.swift in Sources */,
+				282483062C0F1DBE009B00C3 /* ConnectionStatus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D339262C0CCD6A00BBDEB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D1B25E2C0DE1E000856A7C /* Then.swift in Sources */,
+				28D339302C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28D339342C0CCD6B00BBDEB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D339292C0CCD6A00BBDEB1 /* NetworkFlow */;
+			targetProxy = 28D339332C0CCD6B00BBDEB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		284A02B22C0B63A700A5D93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		284A02B32C0B63A700A5D93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		284A02B52C0B63A700A5D93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.VpnGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		284A02B62C0B63A700A5D93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.VpnGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28D339372C0CCD6B00BBDEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkFlow/NetworkFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkFlow/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkFlow;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.VpnGuard.NetworkFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28D339382C0CCD6B00BBDEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkFlow/NetworkFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkFlow/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkFlow;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.VpnGuard.NetworkFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		284A02A12C0B63A500A5D93B /* Build configuration list for PBXProject "VpnGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284A02B22C0B63A700A5D93B /* Debug */,
+				284A02B32C0B63A700A5D93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284A02B42C0B63A700A5D93B /* Build configuration list for PBXNativeTarget "VpnGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284A02B52C0B63A700A5D93B /* Debug */,
+				284A02B62C0B63A700A5D93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28D339362C0CCD6B00BBDEB1 /* Build configuration list for PBXNativeTarget "NetworkFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D339372C0CCD6B00BBDEB1 /* Debug */,
+				28D339382C0CCD6B00BBDEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HumorousGhost/InternetSpeed";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/m-lab/ndt7-client-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+		285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.1;
+			};
+		};
+		28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ss-abramchuk/OpenVPNAdapter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2824830A2C0F59DC009B00C3 /* InternetSpeed */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */;
+			productName = InternetSpeed;
+		};
+		2824830D2C0F5BA9009B00C3 /* NDT7 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */;
+			productName = NDT7;
+		};
+		285601ED2C174926006DBFB2 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
+		28D1B2512C0D192000856A7C /* OpenVPNAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */;
+			productName = OpenVPNAdapter;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 284A029E2C0B63A500A5D93B /* Project object */;
+}

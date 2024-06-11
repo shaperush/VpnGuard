@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "adaptysdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adaptyteam/AdaptySDK-iOS.git",
+      "state" : {
+        "revision" : "bab45f77d19c3ca12b993368454cdc9184bf60c0",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "internetspeed",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HumorousGhost/InternetSpeed",
+      "state" : {
+        "revision" : "e0ebbcbc6bd083788c05296141dee4373ba00b6e",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "ndt7-client-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/m-lab/ndt7-client-ios",
+      "state" : {
+        "revision" : "06fe3e4a47100bf90bd853f5db8c10d38678e040",
+        "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "openvpnadapter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ss-abramchuk/OpenVPNAdapter",
+      "state" : {
+        "revision" : "0e2db0baa0d66029cbb18d74b78bc7a5c9013fba",
+        "version" : "0.8.0"
+      }
+    }
+  ],
+  "version" : 2
+}
