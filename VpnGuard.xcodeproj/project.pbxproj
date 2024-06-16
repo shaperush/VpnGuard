@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 280CFA782C1C4B68000C1C13 /* Adapty */; };
+		280CFA7B2C1C4DCE000C1C13 /* HeaderToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA7A2C1C4DCE000C1C13 /* HeaderToolbarView.swift */; };
+		280CFA7E2C1C4FC5000C1C13 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA7D2C1C4FC5000C1C13 /* AppStrings.swift */; };
+		280CFA812C1C5996000C1C13 /* StartTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA802C1C5996000C1C13 /* StartTutorialView.swift */; };
 		282483062C0F1DBE009B00C3 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */; };
 		282483082C0F3385009B00C3 /* SpeedTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */; };
 		2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */ = {isa = PBXBuildFile; productRef = 2824830A2C0F59DC009B00C3 /* InternetSpeed */; };
@@ -17,9 +21,8 @@
 		284A02AE2C0B63A700A5D93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A02AD2C0B63A700A5D93B /* Assets.xcassets */; };
 		284A02B12C0B63A700A5D93B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A02B02C0B63A700A5D93B /* Preview Assets.xcassets */; };
 		284A02BC2C0B642800A5D93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02BB2C0B642800A5D93B /* AppDelegate.swift */; };
-		285601E62C16FB04006DBFB2 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601E52C16FB04006DBFB2 /* PaywallManager.swift */; };
+		285601E62C16FB04006DBFB2 /* PaywallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601E52C16FB04006DBFB2 /* PaywallService.swift */; };
 		285601EB2C16FB43006DBFB2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601EA2C16FB42006DBFB2 /* AppConstants.swift */; };
-		285601EE2C174926006DBFB2 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 285601ED2C174926006DBFB2 /* Adapty */; };
 		285601F22C174A0F006DBFB2 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */; };
 		285601F32C174A0F006DBFB2 /* PaywallDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */; };
 		285601F82C174A56006DBFB2 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F42C174A56006DBFB2 /* Color+Hex.swift */; };
@@ -27,10 +30,8 @@
 		285601FA2C174A56006DBFB2 /* Color+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F62C174A56006DBFB2 /* Color+Palette.swift */; };
 		285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F72C174A56006DBFB2 /* View+isHidden.swift */; };
 		285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FC2C174B2F006DBFB2 /* PaywallView.swift */; };
-		285601FF2C174B65006DBFB2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FE2C174B65006DBFB2 /* UserService.swift */; };
 		2871916D2C18F12800F4DA27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871916C2C18F12800F4DA27 /* User.swift */; };
 		28B0CCF92C0E82B400157779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCF82C0E82B400157779 /* HomeView.swift */; };
-		28B0CCFD2C0E838300157779 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFC2C0E838300157779 /* RateView.swift */; };
 		28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFF2C0E839A00157779 /* SettingsView.swift */; };
 		28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD022C0E83AE00157779 /* SpeedTestView.swift */; };
 		28B0CD052C0E890D00157779 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD042C0E890A00157779 /* ViewExt.swift */; };
@@ -128,6 +129,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		280CFA7A2C1C4DCE000C1C13 /* HeaderToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderToolbarView.swift; sourceTree = "<group>"; };
+		280CFA7D2C1C4FC5000C1C13 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		280CFA802C1C5996000C1C13 /* StartTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTutorialView.swift; sourceTree = "<group>"; };
 		282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestViewModel.swift; sourceTree = "<group>"; };
 		2824830F2C0F87F1009B00C3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -137,7 +141,7 @@
 		284A02AD2C0B63A700A5D93B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284A02B02C0B63A700A5D93B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		284A02BB2C0B642800A5D93B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		285601E52C16FB04006DBFB2 /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
+		285601E52C16FB04006DBFB2 /* PaywallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallService.swift; sourceTree = "<group>"; };
 		285601EA2C16FB42006DBFB2 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallDataDTO.swift; sourceTree = "<group>"; };
@@ -146,10 +150,8 @@
 		285601F62C174A56006DBFB2 /* Color+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Palette.swift"; sourceTree = "<group>"; };
 		285601F72C174A56006DBFB2 /* View+isHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+isHidden.swift"; sourceTree = "<group>"; };
 		285601FC2C174B2F006DBFB2 /* PaywallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
-		285601FE2C174B65006DBFB2 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2871916C2C18F12800F4DA27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28B0CCF82C0E82B400157779 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		28B0CCFC2C0E838300157779 /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		28B0CCFF2C0E839A00157779 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		28B0CD022C0E83AE00157779 /* SpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestView.swift; sourceTree = "<group>"; };
 		28B0CD042C0E890A00157779 /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 			files = (
 				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
 				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
-				285601EE2C174926006DBFB2 /* Adapty in Frameworks */,
+				280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +251,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280CFA7C2C1C4FA3000C1C13 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				285601EA2C16FB42006DBFB2 /* AppConstants.swift */,
+				280CFA7D2C1C4FC5000C1C13 /* AppStrings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		280CFA7F2C1C595A000C1C13 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				280CFA802C1C5996000C1C13 /* StartTutorialView.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		284A029D2C0B63A500A5D93B = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +313,6 @@
 			children = (
 				284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */,
 				284A02BB2C0B642800A5D93B /* AppDelegate.swift */,
-				285601EA2C16FB42006DBFB2 /* AppConstants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -302,10 +320,10 @@
 		284A02B82C0B63C500A5D93B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				280CFA7F2C1C595A000C1C13 /* Tutorial */,
 				285601EF2C1749C9006DBFB2 /* Paywall */,
 				28ECD2B62C12565400EBEB4D /* Terms */,
 				28B0CD012C0E839E00157779 /* SpeedTest */,
-				28B0CCFB2C0E836C00157779 /* Rate */,
 				28B0CCFA2C0E836500157779 /* Settings */,
 				28B0CCF72C0E829F00157779 /* Home */,
 				284A02C42C0BD16100A5D93B /* Menu */,
@@ -318,6 +336,7 @@
 		284A02B92C0B63D100A5D93B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				280CFA7C2C1C4FA3000C1C13 /* Constants */,
 				28D1B25F2C0DED2D00856A7C /* Extention */,
 				28D3393C2C0CD26000BBDEB1 /* Service */,
 				28D3391D2C0CAFCF00BBDEB1 /* Models */,
@@ -330,6 +349,7 @@
 			children = (
 				284A02AB2C0B63A500A5D93B /* ContentView.swift */,
 				28D339202C0CB3D900BBDEB1 /* ContentViewModel.swift */,
+				280CFA7A2C1C4DCE000C1C13 /* HeaderToolbarView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -353,8 +373,7 @@
 		285601E42C16FAF1006DBFB2 /* Paywall */ = {
 			isa = PBXGroup;
 			children = (
-				285601FE2C174B65006DBFB2 /* UserService.swift */,
-				285601E52C16FB04006DBFB2 /* PaywallManager.swift */,
+				285601E52C16FB04006DBFB2 /* PaywallService.swift */,
 			);
 			path = Paywall;
 			sourceTree = "<group>";
@@ -381,14 +400,6 @@
 				28B0CCFF2C0E839A00157779 /* SettingsView.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		28B0CCFB2C0E836C00157779 /* Rate */ = {
-			isa = PBXGroup;
-			children = (
-				28B0CCFC2C0E838300157779 /* RateView.swift */,
-			);
-			path = Rate;
 			sourceTree = "<group>";
 		};
 		28B0CD012C0E839E00157779 /* SpeedTest */ = {
@@ -658,7 +669,7 @@
 			packageProductDependencies = (
 				2824830A2C0F59DC009B00C3 /* InternetSpeed */,
 				2824830D2C0F5BA9009B00C3 /* NDT7 */,
-				285601ED2C174926006DBFB2 /* Adapty */,
+				280CFA782C1C4B68000C1C13 /* Adapty */,
 			);
 			productName = VpnGuard;
 			productReference = 284A02A62C0B63A500A5D93B /* VpnGuard.app */;
@@ -715,7 +726,7 @@
 				28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */,
 				282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */,
 				2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */,
-				285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
+				280CFA772C1C4B68000C1C13 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 			);
 			productRefGroup = 284A02A72C0B63A500A5D93B /* Products */;
 			projectDirPath = "";
@@ -799,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280CFA812C1C5996000C1C13 /* StartTutorialView.swift in Sources */,
 				28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */,
 				285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */,
 				284A02BC2C0B642800A5D93B /* AppDelegate.swift in Sources */,
@@ -812,11 +824,11 @@
 				284A02AC2C0B63A500A5D93B /* ContentView.swift in Sources */,
 				282483102C0F87F1009B00C3 /* MenuItem.swift in Sources */,
 				28D1B2632C0E539100856A7C /* SideMenuView.swift in Sources */,
+				280CFA7B2C1C4DCE000C1C13 /* HeaderToolbarView.swift in Sources */,
 				28D339212C0CB3D900BBDEB1 /* ContentViewModel.swift in Sources */,
 				285601F32C174A0F006DBFB2 /* PaywallDataDTO.swift in Sources */,
-				285601E62C16FB04006DBFB2 /* PaywallManager.swift in Sources */,
-				28B0CCFD2C0E838300157779 /* RateView.swift in Sources */,
-				285601FF2C174B65006DBFB2 /* UserService.swift in Sources */,
+				285601E62C16FB04006DBFB2 /* PaywallService.swift in Sources */,
+				280CFA7E2C1C4FC5000C1C13 /* AppStrings.swift in Sources */,
 				285601F92C174A56006DBFB2 /* Image+Gallery.swift in Sources */,
 				28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */,
 				28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */,
@@ -1128,6 +1140,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		280CFA772C1C4B68000C1C13 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.10.1;
+			};
+		};
 		282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HumorousGhost/InternetSpeed";
@@ -1144,14 +1164,6 @@
 				minimumVersion = 0.0.4;
 			};
 		};
-		285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
-			requirement = {
-				kind = exactVersion;
-				version = 2.2.1;
-			};
-		};
 		28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ss-abramchuk/OpenVPNAdapter";
@@ -1163,6 +1175,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		280CFA782C1C4B68000C1C13 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 280CFA772C1C4B68000C1C13 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
 		2824830A2C0F59DC009B00C3 /* InternetSpeed */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */;
@@ -1172,11 +1189,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */;
 			productName = NDT7;
-		};
-		285601ED2C174926006DBFB2 /* Adapty */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 285601EC2C174926006DBFB2 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
-			productName = Adapty;
 		};
 		28D1B2512C0D192000856A7C /* OpenVPNAdapter */ = {
 			isa = XCSwiftPackageProductDependency;

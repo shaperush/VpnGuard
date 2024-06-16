@@ -13,17 +13,15 @@ struct VpnGuardApp: App {
     @Environment(\.scenePhase) var scenePhase
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var paywallService = PaywallService()
-    @StateObject var userService = UserService()
     @State private var showingPaywall = false
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(paywallService)
-                .environmentObject(userService)
                 .onAppear {
                     if Adapty.delegate == nil {
-                        Adapty.delegate = userService
+                        Adapty.delegate = paywallService
                     }
                 }
         }

@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct CountryListView: View {
+    @Binding var showPremiumOnDismiss: Bool
+    @EnvironmentObject var paywallService: PaywallService
     @ObservedObject var viewModel: ContentViewModel
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack(spacing: 0) {
             ForEach(viewModel.countryList, id: \.id) { item in
                 Button {
-                    viewModel.updateCountry(item)
-                    dismiss()
+                    if paywallService.isPremium {
+                        viewModel.updateCountry(item)
+                        dismiss()
+                    } else {
+                        dismiss()
+                        showPremiumOnDismiss.toggle()
+                    }
+                    
                 } label: {
                     CountryItem(country: item, isSelected: item == viewModel.selectedCountry)
                 }.buttonStyle(.plain)
@@ -54,5 +62,5 @@ struct CountryItem: View {
 }
 
 #Preview {
-    CountryListView(viewModel: ContentViewModel())
+    CountryListView(showPremiumOnDismiss: .constant(false), viewModel: ContentViewModel())
 }

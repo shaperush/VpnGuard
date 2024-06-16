@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var paywallService: PaywallService
     @ObservedObject var viewModel: ContentViewModel
     @Binding var showSideMenu: Bool
     @State var connectWhenStart: Bool = false
     @State var useUDP: Bool = false
     @State var showTerms: Bool = false
     @State var showAbout: Bool = false
-
+    @Binding var showPremiumView: Bool
+    
     var body: some View {
         VStack {
-            HeaderToolbar(showSideMenu: $showSideMenu)
-            
+            HeaderToolbarView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
+                .environmentObject(paywallService)
             VStack {
                 SettingItemView(toggle: $viewModel.connectOnStart, title: "Connect when start", subtitle: "Connect to VPN when app starts")
                 
@@ -63,20 +65,6 @@ struct SettingsView: View {
     }
 }
 
-struct HeaderToolbar: View {
-    @Binding var showSideMenu: Bool
-    var body: some View {
-        HStack(alignment: .top) {
-            Button(action: {
-                showSideMenu.toggle()
-            }, label: {
-                Image(.menuIco)
-            }).buttonStyle(.plain)
-            Spacer()
-        }
-    }
-}
-
 struct SettingItemView: View {
     @Binding var toggle: Bool
     let title: String
@@ -101,5 +89,5 @@ struct SettingItemView: View {
 }
 
 #Preview {
-    SettingsView(viewModel: ContentViewModel(), showSideMenu: .constant(false))
+    SettingsView(viewModel: ContentViewModel(), showSideMenu: .constant(false), showPremiumView: .constant(false))
 }

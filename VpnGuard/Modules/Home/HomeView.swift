@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var paywallService: PaywallService
+    @State var showPremiumOnDismiss = false
     @State var isShowCountryList: Bool = false
+    @State var showPremiumWhenDismiss: Bool = false
     @Binding var showSideMenu: Bool
     @ObservedObject var viewModel: ContentViewModel
+    @Binding var showPremiumView: Bool
     var body: some View {
         ZStack {
             VStack {
-                HeaderToolbar(showSideMenu: $showSideMenu)
-                
+                HeaderToolbarView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
+                    .environmentObject(paywallService)
                 ConnectedInfoView(download: $viewModel.downloadSpeed, upload: $viewModel.uploadSpeed)
                 
                 Spacer()
@@ -26,8 +30,13 @@ struct HomeView: View {
             }
         }
         .background(.appBg)
-        .sheet(isPresented: $isShowCountryList) {
-            CountryListView(viewModel: viewModel)
+        .sheet(isPresented: $isShowCountryList, onDismiss: {
+            if showPremiumOnDismiss {
+                showPremiumView.toggle()
+            }
+        }) {
+            CountryListView(showPremiumOnDismiss: $showPremiumOnDismiss, viewModel: viewModel)
+                .environmentObject(paywallService)
         }
         .hiddenTabBar()
     }
@@ -184,5 +193,5 @@ struct SelectedCountry: View {
 
 
 #Preview {
-    HomeView(showSideMenu: .constant(false), viewModel: ContentViewModel())
+    HomeView(showSideMenu: .constant(false), viewModel: ContentViewModel(), showPremiumView: .constant(false))
 }

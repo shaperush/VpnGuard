@@ -9,27 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showSideMenu: Bool = false
+    @State var showPremiumView: Bool = false
     @State var selectedSideMenuTab = 0
     @StateObject var viewModel = ContentViewModel()
+    @EnvironmentObject var paywallService: PaywallService
     
+    @AppStorage("isShowTutorial") var isShowTutorial = true
     var body: some View {
-        ZStack{
+        ZStack {
+            
             TabView(selection: $selectedSideMenuTab) {
-                HomeView(showSideMenu: $showSideMenu, viewModel: viewModel)
+                HomeView(showSideMenu: $showSideMenu, viewModel: viewModel, showPremiumView: $showPremiumView)
                     .tag(0)
-                RateView(showSideMenu: $showSideMenu)
+                    .environmentObject(paywallService)
+                SpeedTestView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
                     .tag(1)
-                SpeedTestView(showSideMenu: $showSideMenu)
+                    .environmentObject(paywallService)
+                SettingsView(viewModel: viewModel, showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
                     .tag(2)
-                SettingsView(viewModel: viewModel, showSideMenu: $showSideMenu)
-                    .tag(3)
+                    .environmentObject(paywallService)
             }
+            
             
             if showSideMenu {
                 SideMenuView(showSideMenu: $showSideMenu,
                              selectedSideMenuTab: $selectedSideMenuTab)
             }
-        }
+            
+            if isShowTutorial {
+                StartTutorialView(showPremiumView: $showPremiumView)
+                    .transition(.move(edge: .leading))
+                    .animation(.easeInOut, value: isShowTutorial)
+            }
+            
+        }.fullScreenCover(isPresented: $showPremiumView, content: {
+            PaywallView()
+                .environmentObject(paywallService)
+        })
     }
 }
 

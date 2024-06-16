@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct SpeedTestView: View {
+    @EnvironmentObject var paywallService: PaywallService
     @StateObject var viewModel: SpeedTestViewModel = SpeedTestViewModel()
     @Binding var showSideMenu: Bool
+    @Binding var showPremiumView: Bool
     var body: some View {
         VStack {
-            HStack(alignment: .top) {
-                Button(action: {
-                    showSideMenu.toggle()
-                }, label: {
-                    Image(.menuIco)
-                }).buttonStyle(.plain)
-                Spacer()
-            }
-            
+            HeaderToolbarView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
+                .environmentObject(paywallService)
             ConnectedInfoView(download: $viewModel.downloadSpeed, upload: $viewModel.uploadSpeed)
             
             Spacer()
@@ -85,5 +80,5 @@ struct SpeedProgressView: View {
 }
 
 #Preview {
-    SpeedTestView(viewModel: SpeedTestViewModel(), showSideMenu: .constant(false))
+    SpeedTestView(viewModel: SpeedTestViewModel(), showSideMenu: .constant(false), showPremiumView: .constant(false))
 }

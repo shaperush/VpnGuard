@@ -1,60 +1,57 @@
-//
-//  PaywallView.swift
-//  Adapty-Demo
-//
-//  Created by Elena Gordienko on 01.08.22.
-//  Copyright © 2022 Adapty. All rights reserved.
-//
-
 import Adapty
 import Foundation
 import SwiftUI
 
+struct ProductsModel: Identifiable {
+    var id: Int
+    var price: String
+    var name: String
+}
+
 struct PaywallView: View {
+    @Environment(\.openURL) var openURL
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var paywallService: PaywallService
-    @EnvironmentObject var userService: UserService
     @State var isLoading: Bool = false
     @State var errorAlertMessage: String?
     @State var shouldShowErrorAlert: Bool = false
     @State var alertMessage: String?
     @State var shouldShowAlert: Bool = false
+    @State var selectedProduct: Int = 0
     
+    var items: [GridItem] {
+        Array(repeating: .init(.adaptive(minimum: 160)), count: 2)
+    }
+
     // MARK: - body
-    
     var body: some View {
         ZStack {
-            backgorundColor.ignoresSafeArea()
+            Color.appBg.ignoresSafeArea()
             VStack {
                 topCloseButton
                 Spacer()
-                descriptionGroup
+                titleGroup
                 Spacer()
+                productGroup
                 buttonGroup
             }
             .disabled(isLoading)
             progressView
                 .isHidden(!isLoading)
-        }.onAppear() {
-            paywallService.logPaywallDisplay()
         }
     }
     
     // MARK: - top close button
-    
     var topCloseButton: some View {
         HStack {
-            Button(
-                role: .destructive,
-                action: {
-                    presentationMode.wrappedValue.dismiss()
-                },
-                label: {
-                    Image.System.close
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(textColor)
-                }
+            Button( role: .destructive, action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Image.System.close
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.secondary)
+            }
             ).padding()
             Spacer()
         }
@@ -62,118 +59,92 @@ struct PaywallView: View {
     }
     
     // MARK: - description
-    
-    var descriptionGroup: some View {
-        VStack {
-            Image(paywallService.paywallViewModel?.iconName ?? "")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 200, maxHeight: 200, alignment: .center)
-            Text(paywallService.paywallViewModel?.description ?? "")
-                .font(.title)
+    var titleGroup: some View {
+        VStack(alignment: .center) {
+            Text(AppStrings.paywallTitle)
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundColor(.black)
+                .padding()
+            Text(AppStrings.paywallSubtitle)
+                .font(.system(size: 16, weight: .regular))
+                .foregroundColor(.secondary)
+                .padding(.horizontal, 50)
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
         }
-        .fixedSize(horizontal: false, vertical: true)
-        .foregroundColor(textColor)
         .padding()
     }
-        
-    // MARK: - button group
     
+    // MARK: - productGroup
+    var productGroup: some View {
+        VStack {
+            Text(AppStrings.choosePlan)
+                .textCase(.uppercase)
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.secondary)
+                .padding()
+            LazyVGrid(columns: items, spacing: 20) {
+                ForEach(Array(paywallService.paywallProducts.enumerated()), id: \.offset) { index, item in
+                    ProductItemView(selectedIndex: $selectedProduct, product: item, index: index)
+                }
+            }
+            .padding(.horizontal, 20)
+        }
+        .padding(.bottom, 40)
+    }
+    
+    // MARK: - buttonGroup
     var buttonGroup: some View {
         VStack {
-            HStack(alignment: .center, spacing: 12) {
-                let model = paywallService.paywallViewModel
-                ForEach(model?.productModels ?? [], id: \.id) { product in
-                    buyButton(title: model?.buyActionTitle ?? "", product: product)
-                }
+            Button {
+                purchaseAction(product: paywallService.paywallProducts[selectedProduct])
+            } label: {
+                Text(AppStrings.continueButton)
+                    .textCase(.uppercase)
+                    .frame(height: 48)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .foregroundStyle(.white)
+                    .background(.appAction)
+                    .font(.system(size: 16, weight: .semibold))
+                    .cornerRadius(10.0)
+            }.buttonStyle(.plain)
+            
+            HStack(spacing: 0) {
+                Button {
+                    openURL(URL(string: AppConstants.TERMS_URL)!)
+                } label: {
+                    Text(AppStrings.terms)
+                        .frame(height: 48)
+                        .frame( alignment: .leading)
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal)
+                }.buttonStyle(.plain)
+                
+                Button {
+                    restorePurchaseAction()
+                } label: {
+                    Text(AppStrings.restorePurchase)
+                        .frame(height: 48)
+                        .frame( alignment: .center )
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal)
+                }.buttonStyle(.plain)
+                
+                Button {
+                    openURL(URL(string: AppConstants.POLICY_URL)!)
+                    restorePurchaseAction()
+                } label: {
+                    Text(AppStrings.policy)
+                        .frame(height: 48)
+                        .frame(alignment: .trailing)
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal)
+                }.buttonStyle(.plain)
             }
-            restoreButton
         }
-        .padding()
+        .padding(.horizontal, 20)
     }
     
-    // MARK: - buyButton
-    
-    func buyButton(title: String, product: ProductItemModel) -> some View {
-        Button(
-            action: {
-                guard
-                    let product = paywallService.paywallProducts?.first(where: { $0.vendorProductId == product.id })
-                else {
-                    updateErrorAlert(isShown: true, title: "No product found")
-                    return
-                }
-                isLoading = true
-                userService.makePurchase(for: product) { succeeded, error in
-                    isLoading = false
-                    guard succeeded else {
-                        error.map { print($0) }
-                        return
-                    }
-                    alertMessage = "Success!"
-                    shouldShowAlert = true
-                }
-            },
-            label: { buyButtonLabel(title: title, product: product) }
-        )
-    }
-    
-    func buyButtonLabel(title: String, product: ProductItemModel) -> some View {
-        let discount = product.introductoryDiscount
-        let discountText = discount.map { "\($0.localizedPeriod) for \($0.localizedPrice)"} ?? ""
-        return ZStack {
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .fill(buyButtonColor)
-            VStack {
-                Text(product.period)
-                    .font(.title)
-                Text(title)
-                    .font(.body)
-                Text(product.priceString)
-                    .font(.title2)
-                Text(discountText)
-                    .font(.title3)
-                    .lineLimit(2)
-                    .padding(.top, 10)
-                    .isHidden(discount == nil, removeIfHidden: true)
-            }
-            .padding()
-            .foregroundColor(buyButtonTextColor)
-        }.frame(maxHeight: 200, alignment: .center)
-    }
-    
-    // MARK: - restore button
-    
-    var restoreButton: some View {
-        Button(
-            role: .none,
-            action: {
-                isLoading = true
-                userService.restorePurchases { isPremium, error in
-                    isLoading = false
-                    guard error == nil else {
-                        errorAlertMessage = "Could not restore purchases."
-                        shouldShowErrorAlert = true
-                        return
-                    }
-                    alertMessage = "Successfully restored purchases!"
-                    shouldShowAlert = true
-                }
-            },
-            label: {
-                Text(paywallService.paywallViewModel?.restoreActionTitle ?? "")
-                    .font(.title3)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .foregroundColor(textColor)
-            }
-        )
-    }
-    
-    // MARK: - progress view
-    
+    // MARK: - Progress view
     var progressView: some View {
         ZStack {
             Color.Palette.background.ignoresSafeArea().opacity(0.3)
@@ -201,27 +172,68 @@ struct PaywallView: View {
         errorAlertMessage = title
         shouldShowErrorAlert = isShown
     }
+    
+    private func restorePurchaseAction() {
+        isLoading = true
+        paywallService.restorePurchases { isPremium, error in
+            isLoading = false
+            guard error == nil else {
+                errorAlertMessage = "Could not restore purchases."
+                shouldShowErrorAlert = true
+                return
+            }
+            alertMessage = "Successfully restored purchases!"
+            shouldShowAlert = true
+        }
+    }
+    
+    private func purchaseAction(product: ProductItemModel) {
+        guard let product = paywallService.adaptyProducts.first(where: { $0.vendorProductId == product.id })  else {
+            updateErrorAlert(isShown: true, title: "No product found")
+            return
+        }
+        isLoading = true
+        paywallService.makePurchase(for: product) { succeeded, error in
+            isLoading = false
+            guard succeeded else {
+                error.map { print($0) }
+                return
+            }
+            alertMessage = "Success!"
+            shouldShowAlert = true
+        }
+    }
 }
 
-// MARK: - Colors
 
-extension PaywallView {
-    var backgorundColor: Color {
-        paywallService.paywallViewModel?.backgroundColor ?? Color.Palette.accent
-    }
-    
-    var textColor: Color {
-        paywallService.paywallViewModel?.textColor ?? Color.Palette.accentContent
-    }
-    
-    var buyButtonTextColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonTextColor ?? Color.Palette.accent
-    }
-    
-    var buyButtonColor: Color {
-        paywallService.paywallViewModel?.buyButtonStyle.buttonColor ?? Color.Palette.accentContent
+struct ProductItemView: View {
+    @Binding var selectedIndex: Int
+    var product: ProductItemModel
+    var index: Int
+    var body: some View {
+        Button {
+            selectedIndex = index
+        } label: {
+            VStack(spacing: 2) {
+                Text(product.priceString)
+                    .font(.system(size: 16, weight: .semibold))
+                Text(product.period)
+                    .font(.system(size: 12, weight: .regular))
+                    .foregroundStyle(.secondary)
+            }
+            .frame(height: 88)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .background(.white)
+            .cornerRadius(16)
+            .shadow(color: .barShadow, radius: 16, y: 8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(selectedIndex == index ? .appAction : .clear, lineWidth: 1)
+            )
+        }.buttonStyle(.plain)
     }
 }
+
 
 // MARK: - preview
 
@@ -229,6 +241,5 @@ struct PaywallView_Previews: PreviewProvider {
     static var previews: some View {
         PaywallView()
             .environmentObject(PaywallService())
-            .environmentObject(UserService())
     }
 }
