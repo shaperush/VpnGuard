@@ -31,6 +31,7 @@
 		285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F72C174A56006DBFB2 /* View+isHidden.swift */; };
 		285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FC2C174B2F006DBFB2 /* PaywallView.swift */; };
 		2871916D2C18F12800F4DA27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871916C2C18F12800F4DA27 /* User.swift */; };
+		288118872C2045AE00EE714C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288118862C2045AE00EE714C /* StoreKit.framework */; };
 		28B0CCF92C0E82B400157779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCF82C0E82B400157779 /* HomeView.swift */; };
 		28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFF2C0E839A00157779 /* SettingsView.swift */; };
 		28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD022C0E83AE00157779 /* SpeedTestView.swift */; };
@@ -151,6 +152,8 @@
 		285601F72C174A56006DBFB2 /* View+isHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+isHidden.swift"; sourceTree = "<group>"; };
 		285601FC2C174B2F006DBFB2 /* PaywallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		2871916C2C18F12800F4DA27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		288118862C2045AE00EE714C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		288118882C2045D900EE714C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		28B0CCF82C0E82B400157779 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		28B0CCFF2C0E839A00157779 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		28B0CD022C0E83AE00157779 /* SpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestView.swift; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
 				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
 				280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */,
+				288118872C2045AE00EE714C /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +294,7 @@
 		284A02A82C0B63A500A5D93B /* VpnGuard */ = {
 			isa = PBXGroup;
 			children = (
+				288118882C2045D900EE714C /* Info.plist */,
 				28D3393E2C0CD2D900BBDEB1 /* Resources */,
 				28D339222C0CC80400BBDEB1 /* VpnGuard.entitlements */,
 				284A02B92C0B63D100A5D93B /* Core */,
@@ -576,6 +581,7 @@
 		28D3392B2C0CCD6A00BBDEB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				288118862C2045AE00EE714C /* StoreKit.framework */,
 				28D1B24C2C0D15C600856A7C /* UIKit.framework */,
 				28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */,
 				28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */,
@@ -1000,6 +1006,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VpnGuard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1033,6 +1040,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VpnGuard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
