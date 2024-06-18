@@ -23,10 +23,10 @@ struct ContentView: View {
                     .tag(0)
                     .environmentObject(paywallService)
                 SpeedTestView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
-                    .tag(1)
+                    .tag(2)
                     .environmentObject(paywallService)
                 SettingsView(viewModel: viewModel, showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
-                    .tag(2)
+                    .tag(3)
                     .environmentObject(paywallService)
             }
             

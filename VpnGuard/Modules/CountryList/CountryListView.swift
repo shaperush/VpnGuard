@@ -21,7 +21,7 @@ struct CountryListView: View {
                         dismiss()
                     } else {
                         dismiss()
-                        showPremiumOnDismiss.toggle()
+                        showPremiumOnDismiss = true
                     }
                     
                 } label: {
@@ -52,7 +52,7 @@ struct CountryItem: View {
         
         .frame(maxWidth: .infinity)
         .frame(height: 48)
-        .background(isSelected ? .appAction : .white)
+        .background(isSelected ? .appAction : .appBlock)
         .cornerRadius(16.0)
         .padding(.leading, 16)
         .padding(.trailing, 16)

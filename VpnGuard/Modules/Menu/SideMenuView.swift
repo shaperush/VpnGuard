@@ -33,7 +33,7 @@ struct SideMenuView: View {
                 .offset(x: startAnimation ? -40 : -UIScreen.screenWidth, y: 0)
                 .scaleEffect(0.95)
                 .shadow(color: .secondary, radius: 40)
-                .opacity(0.95)
+                .opacity(1.0)
             
             VStack(alignment: .center) {
                 HStack {

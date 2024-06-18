@@ -22,9 +22,9 @@ struct SettingsView: View {
             HeaderToolbarView(showSideMenu: $showSideMenu, showPremiumView: $showPremiumView)
                 .environmentObject(paywallService)
             VStack {
-                SettingItemView(toggle: $viewModel.connectOnStart, title: "Connect when start", subtitle: "Connect to VPN when app starts")
+                SettingItemView(showPremiumView: $showPremiumView, toggle: $viewModel.connectOnStart, title: "Connect when start", subtitle: "Connect to VPN when app starts")
                 
-                SettingItemView(toggle: $viewModel.isUDP, title: "Use UDP protocol", subtitle: "By default - TCP protocol")
+                SettingItemView(showPremiumView: $showPremiumView, toggle: $viewModel.isUDP, title: "Use UDP protocol", subtitle: "By default - TCP protocol")
               
                 Button {
                     showTerms.toggle()
@@ -32,7 +32,7 @@ struct SettingsView: View {
                     HStack {
                         Text("Privacy policy")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.appTitle)
                         Spacer()
                         Image(.chevronRightIco)
                     }.frame(height: 50)
@@ -44,7 +44,7 @@ struct SettingsView: View {
                     HStack {
                         Text("About")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.appTitle)
                         Spacer()
                         Image(.chevronRightIco)
                     }.frame(height: 50)
@@ -66,6 +66,8 @@ struct SettingsView: View {
 }
 
 struct SettingItemView: View {
+    @EnvironmentObject var paywallService: PaywallService
+    @Binding var showPremiumView: Bool
     @Binding var toggle: Bool
     let title: String
     let subtitle: String
@@ -74,16 +76,27 @@ struct SettingItemView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(title)
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.appTitle)
                 Text(subtitle)
                     .font(.system(size: 10, weight: .medium))
                     .foregroundStyle(.secondary)
             }
             Spacer()
-            Toggle("", isOn: $toggle)
-                .toggleStyle(SwitchToggleStyle(tint: .appAction))
-                .scaleEffect(0.9)
-                .padding(.trailing, -5)
+            HStack {
+                if !paywallService.isPremium {
+                    Image(.crownPrimaryIco)
+                }
+                Toggle("", isOn: $toggle)
+                    .toggleStyle(SwitchToggleStyle(tint: .appAction))
+                    .scaleEffect(0.9)
+                    .padding(.trailing, -5)
+                    .onChange(of: toggle) { value in
+                        if !paywallService.isPremium {
+                            self.toggle = false
+                            showPremiumView = true
+                        }
+                    }
+            }.frame(width: 80)
         }.frame(height: 60)
     }
 }

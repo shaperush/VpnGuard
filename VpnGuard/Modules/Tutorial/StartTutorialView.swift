@@ -60,7 +60,7 @@ struct TutorialPageView: View {
             Spacer()
             Text(page.title)
                 .font(.system(size: 16, weight: .bold))
-                .foregroundStyle(.black)
+                .foregroundStyle(.appTitle)
                 .padding()
                 .multilineTextAlignment(.center)
             Text(page.about)

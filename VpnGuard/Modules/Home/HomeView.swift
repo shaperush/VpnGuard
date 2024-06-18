@@ -24,7 +24,8 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                ConnectionView(viewModel: viewModel)
+                ConnectionView(showPremiumView: $showPremiumView, viewModel: viewModel)
+                    .environmentObject(paywallService)
                 Spacer()
                 SelectedCountry(isShowCountryList: $isShowCountryList, country: $viewModel.selectedCountry)
             }
@@ -33,6 +34,7 @@ struct HomeView: View {
         .sheet(isPresented: $isShowCountryList, onDismiss: {
             if showPremiumOnDismiss {
                 showPremiumView.toggle()
+                showPremiumWhenDismiss = false
             }
         }) {
             CountryListView(showPremiumOnDismiss: $showPremiumOnDismiss, viewModel: viewModel)
@@ -43,6 +45,8 @@ struct HomeView: View {
 }
 
 struct ConnectionView: View {
+    @Binding var showPremiumView: Bool
+    @EnvironmentObject var paywallService: PaywallService
     @ObservedObject var viewModel: ContentViewModel
     var body: some View {
         ZStack {
@@ -51,7 +55,11 @@ struct ConnectionView: View {
             }
             VStack {
                 Button(action: {
-                    viewModel.connect()
+                    if paywallService.isPremium {
+                        viewModel.connect()
+                    } else {
+                        showPremiumView = true
+                    }
                 }, label: {
                     Image(viewModel.connectingStatus == .connected ? .stopConnectionIco : .startConnectionIco)
                 }).buttonStyle(.plain)
@@ -154,7 +162,7 @@ struct ConnectedInfoView: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: 104)
-        .background(.white)
+        .background(.appBlock)
         .cornerRadius(10.0)
         .padding(.leading, 16)
         .padding(.trailing, 16)
@@ -181,7 +189,7 @@ struct SelectedCountry: View {
             
             .frame(maxWidth: .infinity)
             .frame(height: 48)
-            .background(.white)
+            .background(.appBlock)
             .cornerRadius(10.0)
             .padding(.leading, 16)
             .padding(.trailing, 16)

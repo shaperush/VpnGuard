@@ -63,7 +63,7 @@ struct PaywallView: View {
         VStack(alignment: .center) {
             Text(AppStrings.paywallTitle)
                 .font(.system(size: 20, weight: .semibold))
-                .foregroundColor(.black)
+                .foregroundColor(.appTitle)
                 .padding()
             Text(AppStrings.paywallSubtitle)
                 .font(.system(size: 16, weight: .regular))
@@ -223,7 +223,7 @@ struct ProductItemView: View {
             }
             .frame(height: 88)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-            .background(.white)
+            .background(.appBlock)
             .cornerRadius(16)
             .shadow(color: .barShadow, radius: 16, y: 8)
             .overlay(
