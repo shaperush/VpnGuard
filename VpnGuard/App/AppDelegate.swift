@@ -10,12 +10,4 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         Adapty.logLevel = .verbose
         return true
     }
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-
-    }
-    
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-
-    }
 }
