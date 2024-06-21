@@ -31,7 +31,6 @@
 		285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601F72C174A56006DBFB2 /* View+isHidden.swift */; };
 		285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285601FC2C174B2F006DBFB2 /* PaywallView.swift */; };
 		2871916D2C18F12800F4DA27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871916C2C18F12800F4DA27 /* User.swift */; };
-		288118872C2045AE00EE714C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288118862C2045AE00EE714C /* StoreKit.framework */; };
 		28B0CCF92C0E82B400157779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCF82C0E82B400157779 /* HomeView.swift */; };
 		28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFF2C0E839A00157779 /* SettingsView.swift */; };
 		28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD022C0E83AE00157779 /* SpeedTestView.swift */; };
@@ -100,6 +99,7 @@
 		28D3392D2C0CCD6A00BBDEB1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */; };
 		28D339302C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */; };
 		28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DB2FF92C25E10A004472A1 /* StoreKit.framework */; };
 		28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B72C12568100EBEB4D /* TermsView.swift */; };
 		28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */; };
 		28ECD2BC2C12F74000EBEB4D /* StoreExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */; };
@@ -152,7 +152,6 @@
 		285601F72C174A56006DBFB2 /* View+isHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+isHidden.swift"; sourceTree = "<group>"; };
 		285601FC2C174B2F006DBFB2 /* PaywallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		2871916C2C18F12800F4DA27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		288118862C2045AE00EE714C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		288118882C2045D900EE714C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		28B0CCF82C0E82B400157779 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		28B0CCFF2C0E839A00157779 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -224,6 +223,7 @@
 		28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		28D339312C0CCD6B00BBDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28D339322C0CCD6B00BBDEB1 /* NetworkFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkFlow.entitlements; sourceTree = "<group>"; };
+		28DB2FF92C25E10A004472A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28ECD2B72C12568100EBEB4D /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
 		28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreExtention.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
 				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
 				280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */,
-				288118872C2045AE00EE714C /* StoreKit.framework in Frameworks */,
+				28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +581,7 @@
 		28D3392B2C0CCD6A00BBDEB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				288118862C2045AE00EE714C /* StoreKit.framework */,
+				28DB2FF92C25E10A004472A1 /* StoreKit.framework */,
 				28D1B24C2C0D15C600856A7C /* UIKit.framework */,
 				28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */,
 				28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */,
@@ -1001,7 +1001,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -1035,7 +1035,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
