@@ -55,11 +55,11 @@ struct ConnectionView: View {
             }
             VStack {
                 Button(action: {
-                    if paywallService.isPremium {
+//                    if paywallService.isPremium {
                         viewModel.connect()
-                    } else {
-                        showPremiumView = true
-                    }
+//                    } else {
+//                        showPremiumView = true
+//                    }
                 }, label: {
                     Image(viewModel.connectingStatus == .connected ? .stopConnectionIco : .startConnectionIco)
                 }).buttonStyle(.plain)

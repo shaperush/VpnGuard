@@ -167,7 +167,7 @@ extension VpnService {
                 
                 let tunnelProtocol = NETunnelProviderProtocol()
                 tunnelProtocol.serverAddress = ""
-                tunnelProtocol.providerBundleIdentifier = "com.bestapp.VpnGuard.NetworkFlow"
+                tunnelProtocol.providerBundleIdentifier = "net.bestapp.selfvpnguard.NetworkFlowGroup"
                 tunnelProtocol.providerConfiguration = ["configuration": configurationContent]
                 tunnelProtocol.disconnectOnSleep = false
                 

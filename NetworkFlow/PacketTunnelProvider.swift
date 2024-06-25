@@ -28,6 +28,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     var stopHandler: (() -> Void)?
     
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
+        print("START")
         guard let protocolConfiguration = protocolConfiguration as? NETunnelProviderProtocol else {
             fatalError("protocolConfiguration should be an instance of the NETunnelProviderProtocol class")
         }
@@ -97,6 +98,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     }
     
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
+        print("LOAD TRAFFIC")
         if String(data: messageData, encoding: .utf8) == trafficKey {
             let download = vpnAdapter.transportStatistics.bytesIn
             let upload = vpnAdapter.transportStatistics.bytesOut

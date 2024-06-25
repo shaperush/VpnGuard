@@ -99,7 +99,6 @@
 		28D3392D2C0CCD6A00BBDEB1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */; };
 		28D339302C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */; };
 		28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DB2FF92C25E10A004472A1 /* StoreKit.framework */; };
 		28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B72C12568100EBEB4D /* TermsView.swift */; };
 		28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */; };
 		28ECD2BC2C12F74000EBEB4D /* StoreExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */; };
@@ -223,7 +222,6 @@
 		28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		28D339312C0CCD6B00BBDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28D339322C0CCD6B00BBDEB1 /* NetworkFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkFlow.entitlements; sourceTree = "<group>"; };
-		28DB2FF92C25E10A004472A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28ECD2B72C12568100EBEB4D /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
 		28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreExtention.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
 				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
 				280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */,
-				28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +578,6 @@
 		28D3392B2C0CCD6A00BBDEB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				28DB2FF92C25E10A004472A1 /* StoreKit.framework */,
 				28D1B24C2C0D15C600856A7C /* UIKit.framework */,
 				28D1B24A2C0D150800856A7C /* SystemConfiguration.framework */,
 				28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */,
@@ -1003,7 +999,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnGuard/Info.plist;
@@ -1019,7 +1015,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard;
+				PRODUCT_BUNDLE_IDENTIFIER = net.bestapp.selfvpnguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1037,7 +1033,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnGuard/Info.plist;
@@ -1053,7 +1049,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard;
+				PRODUCT_BUNDLE_IDENTIFIER = net.bestapp.selfvpnguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1067,7 +1063,7 @@
 				CODE_SIGN_ENTITLEMENTS = NetworkFlow/NetworkFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetworkFlow/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NetworkFlow;
@@ -1079,7 +1075,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.NetworkFlowGroup;
+				PRODUCT_BUNDLE_IDENTIFIER = net.bestapp.selfvpnguard.NetworkFlowGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1094,7 +1090,7 @@
 				CODE_SIGN_ENTITLEMENTS = NetworkFlow/NetworkFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RL8RZDCK3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetworkFlow/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NetworkFlow;
@@ -1106,7 +1102,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.NetworkFlowGroup;
+				PRODUCT_BUNDLE_IDENTIFIER = net.bestapp.selfvpnguard.NetworkFlowGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
