@@ -217,7 +217,7 @@ struct ProductItemView: View {
             VStack(spacing: 2) {
                 Text(product.priceString)
                     .font(.system(size: 16, weight: .semibold))
-                Text(product.period)
+                Text("per \(product.period)")
                     .font(.system(size: 12, weight: .regular))
                     .foregroundStyle(.secondary)
             }

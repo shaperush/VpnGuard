@@ -231,7 +231,7 @@ Experience the internet without boundaries and with peace of mind.
 
     If you have any questions about this Privacy Policy, You can contact us:
 
-    By email: appguard@gmail.com
+    By email: selfvpnguard@s-softteam.com
     
     """
 }
