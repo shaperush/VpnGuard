@@ -9,6 +9,8 @@
 		<string>packet-tunnel-provider</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
-	<array/>
+	<array>
+		<string>group.com.bestapp.selfvpnguard.onesignal</string>
+	</array>
 </dict>
 </plist>
