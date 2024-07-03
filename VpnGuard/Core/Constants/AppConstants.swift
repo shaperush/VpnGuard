@@ -12,4 +12,9 @@ enum AppConstants {
     static let PLACEMENT_ID = "vpnguard_placement"
     static let TERMS_URL = "https://selfvpnguard.s-dynamic.solutions/terms-of-use"
     static let POLICY_URL = "https://selfvpnguard.s-dynamic.solutions/privacy-policy"
+    
+    static let ONESIGNAL_APP_ID = "4ea3ce12-5855-4c6f-ba0f-93df0c7b78a7"
+    
+    static let APPSFLYER_APPLE_APP_ID = "6504250988"
+    static let APPSFLYER_DEV_KEY = "cfDczLgdL7EAdXW5z8MYAF"
 }

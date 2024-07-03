@@ -99,6 +99,12 @@
 		28D3392D2C0CCD6A00BBDEB1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D3392C2C0CCD6A00BBDEB1 /* NetworkExtension.framework */; };
 		28D339302C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */; };
 		28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28DA71102C34A96800EE7A36 /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 28DA710F2C34A96800EE7A36 /* AppsFlyerLib-Static */; };
+		28DA71182C34AE3400EE7A36 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA71172C34AE3400EE7A36 /* NotificationService.swift */; };
+		28DA711C2C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28DA71152C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28DA71232C34AF4200EE7A36 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 28DA71222C34AF4200EE7A36 /* OneSignalExtension */; };
+		28DA71252C34AF4200EE7A36 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 28DA71242C34AF4200EE7A36 /* OneSignalFramework */; };
+		28DA71272C34AF4200EE7A36 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 28DA71262C34AF4200EE7A36 /* OneSignalInAppMessages */; };
 		28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DB2FF92C25E10A004472A1 /* StoreKit.framework */; };
 		28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B72C12568100EBEB4D /* TermsView.swift */; };
 		28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */; };
@@ -113,6 +119,13 @@
 			remoteGlobalIDString = 28D339292C0CCD6A00BBDEB1;
 			remoteInfo = NetworkFlow;
 		};
+		28DA711A2C34AE3400EE7A36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284A029E2C0B63A500A5D93B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28DA71142C34AE3400EE7A36;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +135,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				28DA711C2C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
 				28D339352C0CCD6B00BBDEB1 /* NetworkFlow.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -223,6 +237,10 @@
 		28D3392F2C0CCD6B00BBDEB1 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		28D339312C0CCD6B00BBDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28D339322C0CCD6B00BBDEB1 /* NetworkFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkFlow.entitlements; sourceTree = "<group>"; };
+		28DA71152C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DA71172C34AE3400EE7A36 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		28DA71192C34AE3400EE7A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28DA71202C34AE7D00EE7A36 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		28DB2FF92C25E10A004472A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28ECD2B72C12568100EBEB4D /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
@@ -235,8 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */,
+				28DA71102C34A96800EE7A36 /* AppsFlyerLib-Static in Frameworks */,
+				28DA71272C34AF4200EE7A36 /* OneSignalInAppMessages in Frameworks */,
 				2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */,
 				280CFA792C1C4B68000C1C13 /* Adapty in Frameworks */,
+				28DA71252C34AF4200EE7A36 /* OneSignalFramework in Frameworks */,
 				28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +270,14 @@
 				28D1B2522C0D192000856A7C /* OpenVPNAdapter in Frameworks */,
 				28D1B24D2C0D15C600856A7C /* UIKit.framework in Frameworks */,
 				28D1B24B2C0D150800856A7C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DA71122C34AE3400EE7A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DA71232C34AF4200EE7A36 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +306,7 @@
 			children = (
 				284A02A82C0B63A500A5D93B /* VpnGuard */,
 				28D3392E2C0CCD6B00BBDEB1 /* NetworkFlow */,
+				28DA71162C34AE3400EE7A36 /* OneSignalNotificationServiceExtension */,
 				28D3392B2C0CCD6A00BBDEB1 /* Frameworks */,
 				284A02A72C0B63A500A5D93B /* Products */,
 			);
@@ -287,6 +317,7 @@
 			children = (
 				284A02A62C0B63A500A5D93B /* VpnGuard.app */,
 				28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */,
+				28DA71152C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -646,6 +677,16 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		28DA71162C34AE3400EE7A36 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				28DA71202C34AE7D00EE7A36 /* OneSignalNotificationServiceExtension.entitlements */,
+				28DA71172C34AE3400EE7A36 /* NotificationService.swift */,
+				28DA71192C34AE3400EE7A36 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		28ECD2B62C12565400EBEB4D /* Terms */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,12 +711,16 @@
 			);
 			dependencies = (
 				28D339342C0CCD6B00BBDEB1 /* PBXTargetDependency */,
+				28DA711B2C34AE3400EE7A36 /* PBXTargetDependency */,
 			);
 			name = VpnGuard;
 			packageProductDependencies = (
 				2824830A2C0F59DC009B00C3 /* InternetSpeed */,
 				2824830D2C0F5BA9009B00C3 /* NDT7 */,
 				280CFA782C1C4B68000C1C13 /* Adapty */,
+				28DA710F2C34A96800EE7A36 /* AppsFlyerLib-Static */,
+				28DA71242C34AF4200EE7A36 /* OneSignalFramework */,
+				28DA71262C34AF4200EE7A36 /* OneSignalInAppMessages */,
 			);
 			productName = VpnGuard;
 			productReference = 284A02A62C0B63A500A5D93B /* VpnGuard.app */;
@@ -701,6 +746,26 @@
 			productReference = 28D3392A2C0CCD6A00BBDEB1 /* NetworkFlow.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		28DA71142C34AE3400EE7A36 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DA711D2C34AE3400EE7A36 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				28DA71112C34AE3400EE7A36 /* Sources */,
+				28DA71122C34AE3400EE7A36 /* Frameworks */,
+				28DA71132C34AE3400EE7A36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+				28DA71222C34AF4200EE7A36 /* OneSignalExtension */,
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 28DA71152C34AE3400EE7A36 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -715,6 +780,9 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					28D339292C0CCD6A00BBDEB1 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					28DA71142C34AE3400EE7A36 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -733,6 +801,8 @@
 				282483092C0F59DC009B00C3 /* XCRemoteSwiftPackageReference "InternetSpeed" */,
 				2824830C2C0F5BA9009B00C3 /* XCRemoteSwiftPackageReference "ndt7-client-ios" */,
 				280CFA772C1C4B68000C1C13 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
+				28DA710E2C34A96800EE7A36 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
+				28DA71212C34AF4200EE7A36 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = 284A02A72C0B63A500A5D93B /* Products */;
 			projectDirPath = "";
@@ -740,6 +810,7 @@
 			targets = (
 				284A02A52C0B63A500A5D93B /* VpnGuard */,
 				28D339292C0CCD6A00BBDEB1 /* NetworkFlow */,
+				28DA71142C34AE3400EE7A36 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -809,6 +880,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28DA71132C34AE3400EE7A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -863,6 +941,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28DA71112C34AE3400EE7A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DA71182C34AE3400EE7A36 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -870,6 +956,11 @@
 			isa = PBXTargetDependency;
 			target = 28D339292C0CCD6A00BBDEB1 /* NetworkFlow */;
 			targetProxy = 28D339332C0CCD6B00BBDEB1 /* PBXContainerItemProxy */;
+		};
+		28DA711B2C34AE3400EE7A36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28DA71142C34AE3400EE7A36 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 28DA711A2C34AE3400EE7A36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1007,7 +1098,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnGuard/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily VPN - Ip Address Changer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1041,7 +1132,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnGuard/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "VPN Guard";
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily VPN - Ip Address Changer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1115,6 +1206,60 @@
 			};
 			name = Release;
 		};
+		28DA711E2C34AE3400EE7A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28DA711F2C34AE3400EE7A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1141,6 +1286,15 @@
 			buildConfigurations = (
 				28D339372C0CCD6B00BBDEB1 /* Debug */,
 				28D339382C0CCD6B00BBDEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DA711D2C34AE3400EE7A36 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DA711E2C34AE3400EE7A36 /* Debug */,
+				28DA711F2C34AE3400EE7A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1180,6 +1334,22 @@
 				minimumVersion = 0.8.0;
 			};
 		};
+		28DA710E2C34A96800EE7A36 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.14.4;
+			};
+		};
+		28DA71212C34AF4200EE7A36 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1202,6 +1372,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28D1B2502C0D192000856A7C /* XCRemoteSwiftPackageReference "OpenVPNAdapter" */;
 			productName = OpenVPNAdapter;
+		};
+		28DA710F2C34A96800EE7A36 /* AppsFlyerLib-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DA710E2C34A96800EE7A36 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
+			productName = "AppsFlyerLib-Static";
+		};
+		28DA71222C34AF4200EE7A36 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DA71212C34AF4200EE7A36 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		28DA71242C34AF4200EE7A36 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DA71212C34AF4200EE7A36 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		28DA71262C34AF4200EE7A36 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DA71212C34AF4200EE7A36 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

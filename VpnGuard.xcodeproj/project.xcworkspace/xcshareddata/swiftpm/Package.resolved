@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "appsflyerframework-static",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static",
+      "state" : {
+        "revision" : "e70fc5ed6b8ed582392bcbf48920ca57bfffc5d7",
+        "version" : "6.14.4"
+      }
+    },
+    {
       "identity" : "internetspeed",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/HumorousGhost/InternetSpeed",
@@ -25,6 +34,15 @@
       "state" : {
         "revision" : "06fe3e4a47100bf90bd853f5db8c10d38678e040",
         "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "onesignal-xcframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OneSignal/OneSignal-XCFramework",
+      "state" : {
+        "revision" : "4b1006d361811aa8f1c4d2ae0fab94a18540ff75",
+        "version" : "5.2.2"
       }
     },
     {
