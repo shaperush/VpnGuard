@@ -11,11 +11,9 @@
 		280CFA7B2C1C4DCE000C1C13 /* HeaderToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA7A2C1C4DCE000C1C13 /* HeaderToolbarView.swift */; };
 		280CFA7E2C1C4FC5000C1C13 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA7D2C1C4FC5000C1C13 /* AppStrings.swift */; };
 		280CFA812C1C5996000C1C13 /* StartTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFA802C1C5996000C1C13 /* StartTutorialView.swift */; };
-		282483062C0F1DBE009B00C3 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */; };
 		282483082C0F3385009B00C3 /* SpeedTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */; };
 		2824830B2C0F59DC009B00C3 /* InternetSpeed in Frameworks */ = {isa = PBXBuildFile; productRef = 2824830A2C0F59DC009B00C3 /* InternetSpeed */; };
 		2824830E2C0F5BA9009B00C3 /* NDT7 in Frameworks */ = {isa = PBXBuildFile; productRef = 2824830D2C0F5BA9009B00C3 /* NDT7 */; };
-		282483102C0F87F1009B00C3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824830F2C0F87F1009B00C3 /* MenuItem.swift */; };
 		284A02AA2C0B63A500A5D93B /* VpnGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */; };
 		284A02AC2C0B63A500A5D93B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A02AB2C0B63A500A5D93B /* ContentView.swift */; };
 		284A02AE2C0B63A700A5D93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284A02AD2C0B63A700A5D93B /* Assets.xcassets */; };
@@ -35,8 +33,11 @@
 		28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CCFF2C0E839A00157779 /* SettingsView.swift */; };
 		28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD022C0E83AE00157779 /* SpeedTestView.swift */; };
 		28B0CD052C0E890D00157779 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0CD042C0E890A00157779 /* ViewExt.swift */; };
+		28CE13622C37425A0040B783 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE13612C37425A0040B783 /* NetworkProtocol.swift */; };
+		28CE13642C37425F0040B783 /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE13632C37425F0040B783 /* AboutInfo.swift */; };
+		28CE13662C3742640040B783 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE13652C3742630040B783 /* ConnectionStatus.swift */; };
+		28CE13682C37426B0040B783 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE13672C37426B0040B783 /* MenuItem.swift */; };
 		28D1B1D92C0CFED300856A7C /* VpnService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1D82C0CFED300856A7C /* VpnService.swift */; };
-		28D1B1DB2C0CFF2700856A7C /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */; };
 		28D1B1DD2C0D083900856A7C /* VpnConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1B1DC2C0D083900856A7C /* VpnConfig.swift */; };
 		28D1B21A2C0D0AD400856A7C /* uk2-tcp443.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1DF2C0D0AD300856A7C /* uk2-tcp443.ovpn */; };
 		28D1B21B2C0D0AD400856A7C /* uk2-udp25000.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 28D1B1E02C0D0AD300856A7C /* uk2-udp25000.ovpn */; };
@@ -107,7 +108,6 @@
 		28DA71272C34AF4200EE7A36 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 28DA71262C34AF4200EE7A36 /* OneSignalInAppMessages */; };
 		28DB2FFA2C25E10A004472A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DB2FF92C25E10A004472A1 /* StoreKit.framework */; };
 		28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B72C12568100EBEB4D /* TermsView.swift */; };
-		28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */; };
 		28ECD2BC2C12F74000EBEB4D /* StoreExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */; };
 /* End PBXBuildFile section */
 
@@ -147,9 +147,7 @@
 		280CFA7A2C1C4DCE000C1C13 /* HeaderToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderToolbarView.swift; sourceTree = "<group>"; };
 		280CFA7D2C1C4FC5000C1C13 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		280CFA802C1C5996000C1C13 /* StartTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTutorialView.swift; sourceTree = "<group>"; };
-		282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		282483072C0F3385009B00C3 /* SpeedTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestViewModel.swift; sourceTree = "<group>"; };
-		2824830F2C0F87F1009B00C3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		284A02A62C0B63A500A5D93B /* VpnGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VpnGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		284A02A92C0B63A500A5D93B /* VpnGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnGuardApp.swift; sourceTree = "<group>"; };
 		284A02AB2C0B63A500A5D93B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,8 +169,11 @@
 		28B0CCFF2C0E839A00157779 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		28B0CD022C0E83AE00157779 /* SpeedTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestView.swift; sourceTree = "<group>"; };
 		28B0CD042C0E890A00157779 /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		28CE13612C37425A0040B783 /* NetworkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		28CE13632C37425F0040B783 /* AboutInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
+		28CE13652C3742630040B783 /* ConnectionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		28CE13672C37426B0040B783 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		28D1B1D82C0CFED300856A7C /* VpnService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnService.swift; sourceTree = "<group>"; };
-		28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		28D1B1DC2C0D083900856A7C /* VpnConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnConfig.swift; sourceTree = "<group>"; };
 		28D1B1DF2C0D0AD300856A7C /* uk2-tcp443.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-tcp443.ovpn"; sourceTree = "<group>"; };
 		28D1B1E02C0D0AD300856A7C /* uk2-udp25000.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "uk2-udp25000.ovpn"; sourceTree = "<group>"; };
@@ -243,7 +244,6 @@
 		28DA71202C34AE7D00EE7A36 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		28DB2FF92C25E10A004472A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28ECD2B72C12568100EBEB4D /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
-		28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInfo.swift; sourceTree = "<group>"; };
 		28ECD2BB2C12F74000EBEB4D /* StoreExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -598,13 +598,13 @@
 			isa = PBXGroup;
 			children = (
 				2871916C2C18F12800F4DA27 /* User.swift */,
+				28CE13632C37425F0040B783 /* AboutInfo.swift */,
+				28CE13652C3742630040B783 /* ConnectionStatus.swift */,
 				285601F12C174A0F006DBFB2 /* PaywallDataDTO.swift */,
+				28CE13672C37426B0040B783 /* MenuItem.swift */,
 				285601F02C174A0F006DBFB2 /* PaywallViewModel.swift */,
+				28CE13612C37425A0040B783 /* NetworkProtocol.swift */,
 				28D3391E2C0CAFE400BBDEB1 /* CountryModel.swift */,
-				28D1B1DA2C0CFF2700856A7C /* NetworkProtocol.swift */,
-				282483052C0F1DBE009B00C3 /* ConnectionStatus.swift */,
-				2824830F2C0F87F1009B00C3 /* MenuItem.swift */,
-				28ECD2B92C1256A500EBEB4D /* AboutInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -898,6 +898,7 @@
 				28B0CD002C0E839A00157779 /* SettingsView.swift in Sources */,
 				285601FD2C174B2F006DBFB2 /* PaywallView.swift in Sources */,
 				284A02BC2C0B642800A5D93B /* AppDelegate.swift in Sources */,
+				28CE13642C37425F0040B783 /* AboutInfo.swift in Sources */,
 				28B0CD052C0E890D00157779 /* ViewExt.swift in Sources */,
 				285601FB2C174A56006DBFB2 /* View+isHidden.swift in Sources */,
 				28D1B1D92C0CFED300856A7C /* VpnService.swift in Sources */,
@@ -906,19 +907,19 @@
 				28D1B2652C0E547B00856A7C /* UIScreenExtention.swift in Sources */,
 				28D1B2612C0DED4100856A7C /* Int64Extention.swift in Sources */,
 				284A02AC2C0B63A500A5D93B /* ContentView.swift in Sources */,
-				282483102C0F87F1009B00C3 /* MenuItem.swift in Sources */,
+				28CE13622C37425A0040B783 /* NetworkProtocol.swift in Sources */,
+				28CE13682C37426B0040B783 /* MenuItem.swift in Sources */,
 				28D1B2632C0E539100856A7C /* SideMenuView.swift in Sources */,
 				280CFA7B2C1C4DCE000C1C13 /* HeaderToolbarView.swift in Sources */,
 				28D339212C0CB3D900BBDEB1 /* ContentViewModel.swift in Sources */,
 				285601F32C174A0F006DBFB2 /* PaywallDataDTO.swift in Sources */,
 				285601E62C16FB04006DBFB2 /* PaywallService.swift in Sources */,
+				28CE13662C3742640040B783 /* ConnectionStatus.swift in Sources */,
 				280CFA7E2C1C4FC5000C1C13 /* AppStrings.swift in Sources */,
 				285601F92C174A56006DBFB2 /* Image+Gallery.swift in Sources */,
 				28ECD2B82C12568100EBEB4D /* TermsView.swift in Sources */,
 				28B0CD032C0E83AE00157779 /* SpeedTestView.swift in Sources */,
-				28ECD2BA2C1256A500EBEB4D /* AboutInfo.swift in Sources */,
 				28D1B1DD2C0D083900856A7C /* VpnConfig.swift in Sources */,
-				28D1B1DB2C0CFF2700856A7C /* NetworkProtocol.swift in Sources */,
 				2871916D2C18F12800F4DA27 /* User.swift in Sources */,
 				285601EB2C16FB43006DBFB2 /* AppConstants.swift in Sources */,
 				285601F82C174A56006DBFB2 /* Color+Hex.swift in Sources */,
@@ -928,7 +929,6 @@
 				284A02AA2C0B63A500A5D93B /* VpnGuardApp.swift in Sources */,
 				28D3391C2C0CAA9C00BBDEB1 /* CountryListView.swift in Sources */,
 				28D3391F2C0CAFE400BBDEB1 /* CountryModel.swift in Sources */,
-				282483062C0F1DBE009B00C3 /* ConnectionStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,7 +1092,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -1112,9 +1112,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1126,7 +1128,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VpnGuard/VpnGuard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"VpnGuard/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -1146,9 +1148,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1173,9 +1177,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.NetworkFlowGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1200,9 +1206,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.NetworkFlowGroup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1227,9 +1235,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1254,9 +1264,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.selfvpnguard.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
