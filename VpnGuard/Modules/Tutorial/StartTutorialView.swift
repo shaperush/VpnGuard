@@ -12,14 +12,17 @@ struct StartTutorialView: View {
         TutorialPage(image: "tutorProductlaunchIco", title: "Access Internet Around the World", about: "Unlock the internet around the world with our VPN, giving you access to global content and websites from anywhere with ease."),
         TutorialPage(image: "", title: "", about: "")
     ]
+    
+    
     @AppStorage("isShowTutorial") var isShowTutorial = true
     @State var currentPage = 0
+    @State var isChecked: Bool = false
     @Binding var showPremiumView: Bool
     var body: some View {
         VStack {
             TabView(selection: $currentPage) {
                 ForEach(tutorialPages.indices, id: \.self) { index in
-                    TutorialPageView(page: tutorialPages[index])
+                    TutorialPageView(page: tutorialPages[index], isChecked: $isChecked)
                         .tag(index)
                 }
             }
@@ -44,7 +47,9 @@ struct StartTutorialView: View {
                         .font(.system(size: 16, weight: .semibold))
                         .cornerRadius(10.0)
                         .padding(.horizontal, 20)
-                }.buttonStyle(.plain)
+                }
+                .buttonStyle(.plain)
+                .disabled(currentPage == 3 && !isChecked)
             }
         }.background(.appBg)
     }
@@ -52,6 +57,7 @@ struct StartTutorialView: View {
 
 struct TutorialPageView: View {
     var page: TutorialPage
+    @Binding var isChecked: Bool
     @Environment(\.openURL) var openURL
     var body: some View {
         VStack {
@@ -94,6 +100,15 @@ struct TutorialPageView: View {
                     }.buttonStyle(.plain)
                 }
                 Spacer()
+                Toggle(isOn: $isChecked) {
+                    Text("I agree with terms of use and privacy policy")
+                        .lineLimit(2)
+                        .font(.system(size: 13, weight: .bold))
+                }
+                .toggleStyle(CheckboxToggleStyle())
+                .padding(.horizontal, 20)
+                
+                Spacer()
             } else {
                 Spacer()
                 Image(page.image)
@@ -111,6 +126,19 @@ struct TutorialPageView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
             }
+        }
+    }
+}
+
+struct CheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        HStack {
+            configuration.label
+            Spacer()
+            Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .onTapGesture { configuration.isOn.toggle() }
         }
     }
 }
