@@ -1,10 +1,3 @@
-//
-//  SpeedTestView.swift
-//  VpnGuard
-//
-//  Created by Maisternya on 04.06.2024.
-//
-
 import SwiftUI
 
 struct SpeedTestView: View {

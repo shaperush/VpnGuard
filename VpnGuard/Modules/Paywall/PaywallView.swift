@@ -131,7 +131,6 @@ struct PaywallView: View {
                 
                 Button {
                     openURL(URL(string: AppConstants.POLICY_URL)!)
-                    restorePurchaseAction()
                 } label: {
                     Text(AppStrings.policy)
                         .frame(height: 48)
